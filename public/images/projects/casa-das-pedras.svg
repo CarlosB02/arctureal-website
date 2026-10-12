@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF9F5"/>
+      <stop offset="100%" stop-color="#F0ECE3"/>
+    </linearGradient>
+    <pattern id="archGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#302D2A" stroke-width="0.35" stroke-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="url(#bgGrad)"/>
+  <rect width="1200" height="750" fill="url(#archGrid)"/>
+
+  <!-- Minimal Outer Frame -->
+  <rect x="40" y="40" width="1120" height="670" fill="none" stroke="#302D2A" stroke-width="1" stroke-opacity="0.18"/>
+
+  <!-- Corner registration ticks -->
+  <line x1="30" y1="40" x2="50" y2="40" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="40" y1="30" x2="40" y2="50" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="1150" y1="40" x2="1170" y2="40" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="1160" y1="30" x2="1160" y2="50" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="30" y1="710" x2="50" y2="710" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="40" y1="700" x2="40" y2="720" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="1150" y1="710" x2="1170" y2="710" stroke="#C08440" stroke-width="1.5"/>
+  <line x1="1160" y1="700" x2="1160" y2="720" stroke="#C08440" stroke-width="1.5"/>
+
+  <!-- Architectural Composition -->
+  
+      <!-- Ground Horizon -->
+      <line x1="0" y1="480" x2="1200" y2="480" stroke="#302D2A" stroke-width="1.5" stroke-opacity="0.2"/>
+      <!-- Main cantilevered volume -->
+      <rect x="240" y="240" width="620" height="190" fill="#E6E0D6" stroke="#302D2A" stroke-width="2"/>
+      <rect x="290" y="280" width="220" height="150" fill="#302D2A" fill-opacity="0.85"/>
+      <rect x="550" y="280" width="260" height="150" fill="#FFFFFF" fill-opacity="0.9"/>
+      <!-- Cantilever overhang shadow -->
+      <polygon points="240,430 860,430 840,460 260,460" fill="#302D2A" fill-opacity="0.08"/>
+      <!-- Stone base retaining wall -->
+      <rect x="180" y="430" width="780" height="90" fill="#DFD8CC" stroke="#302D2A" stroke-width="1.5"/>
+      <line x1="380" y1="430" x2="380" y2="520" stroke="#302D2A" stroke-width="1" stroke-opacity="0.3"/>
+      <line x1="580" y1="430" x2="580" y2="520" stroke="#302D2A" stroke-width="1" stroke-opacity="0.3"/>
+      <line x1="780" y1="430" x2="780" y2="520" stroke="#302D2A" stroke-width="1" stroke-opacity="0.3"/>
+      <!-- Architectural golden accent rod -->
+      <line x1="290" y1="200" x2="290" y2="430" stroke="#C08440" stroke-width="2"/>
+      <circle cx="290" cy="200" r="4" fill="#C08440"/>
+    
+
+  <!-- Header Annotations -->
+  <text x="70" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#302D2A">ARCTUREAL ARCHIVE / HABITAÇÃO UNIFAMILIAR</text>
+  <text x="1130" y="75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" letter-spacing="2" fill="#6E6962">38°47'54" N  9°23'11" W</text>
+
+  <!-- Title Bottom Annotation -->
+  <text x="70" y="680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#302D2A">CASA DAS PEDRAS</text>
+  <text x="1130" y="680" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" letter-spacing="1.5" fill="#C08440">ESTUDO GEOMÉTRICO AUTORAL</text>
+</svg>

@@ -1,0 +1,253 @@
+.section {
+  padding-top: clamp(4rem, 7vw, 7rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border-light);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.headerTitleGroup {
+  max-width: 650px;
+}
+
+.headerTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: var(--color-dark);
+  margin-top: 0.5rem;
+  line-height: 1.15;
+}
+
+.headerLead {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-top: 1rem;
+}
+
+/* 5 Expandable Architectural Louvers / Panes */
+.panesContainer {
+  display: flex;
+  height: 580px;
+  width: 100%;
+  gap: 0.75rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pane {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-border);
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.paneActive {
+  flex: 2.5;
+  border-color: var(--color-primary);
+}
+
+.paneImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.pane:hover .paneImage,
+.paneActive .paneImage {
+  transform: scale(1.04);
+}
+
+.paneOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 22, 20, 0.4) 0%,
+    rgba(24, 22, 20, 0.2) 35%,
+    rgba(24, 22, 20, 0.88) 85%,
+    rgba(24, 22, 20, 0.95) 100%
+  );
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.paneActive .paneOverlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 22, 20, 0.45) 0%,
+    rgba(24, 22, 20, 0.15) 30%,
+    rgba(24, 22, 20, 0.82) 75%,
+    rgba(24, 22, 20, 0.96) 100%
+  );
+}
+
+.paneContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+
+.paneTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paneIndex {
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  font-weight: 600;
+  background: rgba(24, 22, 20, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(192, 132, 64, 0.35);
+  border-radius: 2px;
+}
+
+.paneTag {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 245, 0.7);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.paneActive .paneTag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.paneBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.paneTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 2vw, 2.15rem);
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin: 0;
+  transition: color var(--transition-smooth);
+}
+
+.pane:hover .paneTitle,
+.paneActive .paneTitle {
+  color: #FFFFFF;
+}
+
+.paneDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.1s, max-height 0.4s ease, transform 0.4s ease 0.1s;
+}
+
+.paneActive .paneDetails {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+}
+
+.paneDesc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(250, 248, 245, 0.85);
+  margin: 0;
+}
+
+.paneKeywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.paneBadge {
+  font-size: 0.675rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: rgba(192, 132, 64, 0.15);
+  border: 1px solid rgba(192, 132, 64, 0.3);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.paneAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.25rem;
+  transition: gap var(--transition-smooth);
+}
+
+.paneActive .paneAction:hover {
+  gap: 0.75rem;
+  color: #FFFFFF;
+}
+
+/* Mobile & Tablet view */
+@media (max-width: 1024px) {
+  .panesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .pane {
+    height: 380px;
+    flex: none;
+  }
+
+  .paneActive {
+    flex: none;
+  }
+
+  .paneDetails {
+    opacity: 1;
+    max-height: none;
+    transform: none;
+  }
+
+  .paneTag {
+    opacity: 1;
+    transform: none;
+  }
+}

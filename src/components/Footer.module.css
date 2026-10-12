@@ -1,0 +1,287 @@
+.footer {
+  position: relative;
+  background-color: #171513;
+  color: #FAF8F5;
+  border-top: 1px solid rgba(230, 225, 216, 0.08);
+  overflow: hidden;
+}
+
+/* Luz ambiente suave no topo */
+.ambientLight {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1100px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 0%,
+    rgba(192, 132, 64, 0.08) 0%,
+    rgba(23, 21, 19, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* Secção de informações em 3 colunas */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+  border-bottom: 1px solid rgba(230, 225, 216, 0.08);
+}
+
+/* Coluna 1: Marca */
+.colBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brandTitle {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.brandDesc {
+  font-size: 0.9rem;
+  color: #9E968B;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0;
+}
+
+.brandGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.brandGroupLine {
+  width: 1.5rem;
+  height: 1px;
+  background-color: var(--color-primary);
+  display: inline-block;
+}
+
+.brandGroupText {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Títulos das colunas */
+.colTitle {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+/* Coluna 2: Navegação */
+.colNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.linkItem {
+  font-size: 0.88rem;
+  color: #9E968B;
+  transition: color var(--transition-smooth);
+}
+
+.linkItem:hover {
+  color: #FFFFFF;
+}
+
+/* Coluna 3: Contactos em blocos smooth com pouco destaque */
+.colContact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contactBlock {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(230, 225, 216, 0.06);
+  padding: 0.65rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: border-color var(--transition-smooth), background var(--transition-smooth);
+}
+
+.contactBlock:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(192, 132, 64, 0.25);
+}
+
+.contactLabel {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8A8378;
+  font-weight: 500;
+}
+
+.contactValue {
+  font-size: 0.86rem;
+  color: #FAF8F5;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.contactLink {
+  font-size: 0.86rem;
+  color: #FAF8F5;
+  transition: color var(--transition-smooth);
+}
+
+.contactLink:hover {
+  color: var(--color-primary);
+}
+
+/* Nome ARCTUREAL com animação de luz */
+.monolithContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(1rem, 2.5vw, 2rem);
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.monolithText {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 10.5vw, 9.5rem);
+  letter-spacing: 0.12em;
+  margin-right: -0.12em;
+  line-height: 0.9;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+
+  /* Outline tipográfico suave com gradiente sutil */
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(250, 248, 245, 0.14);
+  text-stroke: 1px rgba(250, 248, 245, 0.14);
+
+  background: linear-gradient(
+    180deg,
+    rgba(250, 248, 245, 0.18) 0%,
+    rgba(192, 132, 64, 0.1) 60%,
+    rgba(23, 21, 19, 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.monolithContainer:hover .monolithText {
+  -webkit-text-stroke-color: rgba(192, 132, 64, 0.45);
+  text-stroke-color: rgba(192, 132, 64, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(192, 132, 64, 0.22) 60%,
+    rgba(23, 21, 19, 0.05) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Linha inferior */
+.bottomBar {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(230, 225, 216, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legalText {
+  font-size: 0.78rem;
+  color: #7A7368;
+  margin: 0;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.socialLink {
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8A8378;
+  transition: color var(--transition-smooth);
+}
+
+.socialLink:hover {
+  color: #FFFFFF;
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .monolithText {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+    letter-spacing: 0.08em;
+  }
+}

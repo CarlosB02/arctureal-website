@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "eyebrow": "Carreiras & Oportunidades",
+    "title": "Oportunidades no Grupo",
+    "subtitle": "Procuramos profissionais com método, rigor e discrição para integrar um ecossistema empresarial dinâmico e em crescimento.",
+    "image": "/images/vagas-hero.jpg"
+  },
+  "intro": {
+    "eyebrow": "Cultura & Desafio",
+    "title": "Estrutura exigente, método rigoroso e impacto transversal.",
+    "text": "O Grupo Arctureal agrega sociedades e atividades diversificadas em Portugal e no plano internacional — desde o imobiliário e hotelaria a investimentos e serviços. O nosso dia a dia privilegia pessoas com autonomia, gosto genuíno por organizar a complexidade e um sentido inegociável de confidencialidade e compromisso."
+  },
+  "jobs": [
+    {
+      "id": "administrativo",
+      "title": "Administrativo(a)",
+      "department": "Administração & Operações",
+      "type": "Tempo Inteiro",
+      "location": "Lisboa (Presencial)",
+      "badge": "Vaga Aberta",
+      "confidential": true,
+      "tagline": "Grupo Empresarial Familiar · Suporte Transversal à Gestão",
+      "overview": "Grupo empresarial familiar com várias sociedades e atividades diversificadas (imobiliário, hotelaria, trading e serviços), em Portugal e com ligações internacionais. Apesar de ser um grupo familiar, tem uma estrutura exigente e pouco linear: várias empresas interligadas, operações entre elas e projetos em curso. Procuramos alguém que não se assuste com essa complexidade, que goste de a organizar e de a tornar clara, e que trabalhe com rigor e total discrição.",
+      "mission": "Dar suporte administrativo e organizativo ao grupo e à gestão, servindo de ponto de ligação entre as várias empresas, os bancos, os fornecedores, os advogados e o contabilista. É uma função transversal, em que se lida ao mesmo tempo com assuntos de várias sociedades, exigindo método e capacidade de manter tudo organizado e acessível.",
+      "responsibilities": [
+        "Organização e arquivo documental das várias empresas (contratos, faturas, escrituras, correspondência), de forma estruturada e pesquisável.",
+        "Apoio ao controlo de prazos e obrigações: pagamentos, renovações e entregas a entidades externas.",
+        "Interligação com bancos, fornecedores, inquilinos, advogados e contabilista, dando seguimento a pedidos e recolhendo documentação.",
+        "Tratamento de correspondência, agendamentos e preparação de dossiers para reuniões.",
+        "Apoio à gestão em tarefas de controlo e acompanhamento do dia a dia das várias empresas."
+      ],
+      "requirements": [
+        "Formação na área administrativa, de gestão ou equivalente.",
+        "Experiência em funções administrativas, idealmente em ambientes com várias empresas ou com alguma complexidade.",
+        "Muito organizada, metódica e orientada ao detalhe: é essencial saber lidar com muita informação sem a deixar dispersar.",
+        "Autónoma e proativa, capaz de pegar num assunto e levá-lo até ao fim sem acompanhamento constante.",
+        "Boa capacidade de comunicação e de relacionamento com interlocutores externos.",
+        "Domínio de ferramentas de escritório (sobretudo Excel) e à vontade para aprender os sistemas do grupo.",
+        "Discrição e sentido de confidencialidade absolutos, dada a natureza familiar e sensível da informação."
+      ],
+      "keyTraits": "Valorizamos sobretudo dois traços, que são os que mais fazem a diferença neste grupo: a capacidade de lidar com a complexidade e de a organizar, e a discrição e confidencialidade totais perante informação sensível."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Quem Somos",
+  "subtitle": "A síntese entre o silêncio da forma, o rigor da engenharia e a alma dos lugares.",
+  "intro": "Fundada com a convicção de que a arquitetura deve transcender modas efémeras, a ARCTUREAL estabeleceu-se como uma marca-mãe de referência, orquestrando sinergias entre diferentes práticas de conceção e construção.",
+  "manifesto": [
+    {
+      "title": "Permanência sobre Tendência",
+      "text": "Desenhamos com a perspetiva de décadas, e não de ciclos de mercado. Uma boa obra envelhece com dignidade e revela a nobreza dos seus materiais através da passagem do tempo."
+    },
+    {
+      "title": "Menos é Mais — O Silêncio da Forma",
+      "text": "Cada linha traçada responde a uma necessidade programática ou poética. Eliminamos o supérfluo para permitir que a luz natural, a proporção e o vazio qualificado assumam o protagonismo."
+    },
+    {
+      "title": "Diálogo com a Matéria e a Paisagem",
+      "text": "Não impomos geometrias descontextualizadas. O nosso processo começa na escuta atenta do solo, da topografia, do clima e da memória cultural de cada sítio."
+    }
+  ],
+  "stats": [
+    { "value": "12", "label": "Anos de Trajetória" },
+    { "value": "4", "label": "Empresas Especializadas no Grupo" },
+    { "value": "+180", "label": "Obras e Estudos Concluídos" },
+    { "value": "100%", "label": "Compromisso com Eficiência Passiva" }
+  ],
+  "timeline": [
+    {
+      "year": "2014",
+      "title": "Génese do Atelier",
+      "description": "Início da atividade com foco em habitação unifamiliar e recuperação cuidada de edifícios históricos em Lisboa."
+    },
+    {
+      "year": "2018",
+      "title": "Nascimento da Arctureal Living",
+      "description": "Criação do departamento de interiores e marcenaria sob medida para responder à procura de projetos chave-na-mão com elevado controlo de detalhe."
+    },
+    {
+      "year": "2021",
+      "title": "Consolidação da Marca-Mãe",
+      "description": "Estruturação institucional da ARCTUREAL como entidade agregadora das várias empresas do grupo e criação do núcleo Arctureal Urban."
+    },
+    {
+      "year": "2024",
+      "title": "Nova Sede na Estrada da Luz",
+      "description": "Instalação no atelier da Estrada da Luz, 96-A, integrando galeria de materiais, estúdio de prototipagem e espaço de trabalho colaborativo."
+    }
+  ],
+  "leadership": [
+    {
+      "name": "Arq. Diogo Vasconcelos",
+      "role": "Presidente do Conselho & Diretor de Criação",
+      "bio": "Membro da Ordem dos Arquitetos, com mais de duas décadas de experiência internacional em arquitetura residencial e regeneração urbana.",
+      "todo": "TODO: Atualizar foto de perfil institucional de estúdio."
+    },
+    {
+      "name": "Eng.ª Marta Alentejano",
+      "role": "Diretora de Operações & Sustentabilidade",
+      "bio": "Especialista em estruturas de baixa pegada carbónica e certificações ambientais europeias, lidera a coordenação técnica das empresas do grupo.",
+      "todo": "TODO: Confirmar biografia e publicação académica recente sobre taipa contemporânea."
+    },
+    {
+      "name": "Arq. Duarte Mello",
+      "role": "Diretor Arctureal Living & Design de Produto",
+      "bio": "Focado no detalhe tátil, materiais naturais e mobiliário arquitetónico com raízes na marcenaria artesanal portuguesa.",
+      "todo": "TODO: Adicionar portfólio de peças premiadas na Bienal de Design."
+    }
+  ]
+}

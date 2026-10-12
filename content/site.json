@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "ARCTUREAL",
+    "subtitle": "Marca-Mãe de Arquitetura",
+    "tagline": "Grupo de empresas de imobiliário, hotelaria, investimentos, gestão e serviços e internacionalização. Um só interlocutor, do primeiro esboço à entrega.",
+    "mission": "Unir mestria técnica, rigor construtivo e sensibilidade intemporal num ecossistema colaborativo de empresas de arquitetura.",
+    "yearFounded": 2014,
+    "siteUrl": "https://www.arctureal.com"
+  },
+  "contacts": {
+    "address": "Estrada da Luz, 96-A, 1600-161 Lisboa",
+    "city": "Lisboa",
+    "postalCode": "1600-161",
+    "country": "Portugal",
+    "phone": "(+351) 211 450 244",
+    "phoneRaw": "+351211450244",
+    "email": "geral@arctureal.com",
+    "googleMapsUrl": "https://maps.google.com/?q=Estrada+da+Luz+96-A+1600-161+Lisboa"
+  },
+  "navigation": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Investidores",
+      "href": "/projetos"
+    },
+    {
+      "label": "Grupo",
+      "href": "/grupo"
+    },
+    {
+      "label": "Vagas",
+      "href": "/vagas"
+    },
+    {
+      "label": "Contactos",
+      "href": "/contactos"
+    }
+  ],
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/arctureal"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/arctureal"
+    }
+  ],
+  "footer": {
+    "legal": "© 2026 ARCTUREAL. Todos os direitos reservados."
+  }
+}

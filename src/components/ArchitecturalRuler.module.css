@@ -1,0 +1,132 @@
+/* Ultra-minimal Full-height Architectural Ruler (Flush to screen edge, no bg) */
+.rulerWrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  height: 100vh;
+  z-index: 99;
+  background: transparent;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Track running full height */
+.rulerTrack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Graduation ticks container */
+.ticksList {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.tick {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform: translateY(-50%);
+}
+
+.tickLine {
+  height: 1px;
+  background-color: rgba(48, 45, 42, 0.2);
+  transition: background-color 160ms ease;
+}
+
+/* Major ticks (every 10%) - Default Dark Tone on Light Backgrounds */
+.tickMajor .tickLine {
+  width: 12px;
+  background-color: rgba(48, 45, 42, 0.55);
+}
+
+/* Medium ticks (every 5%) */
+.tickMedium .tickLine {
+  width: 6px;
+  background-color: rgba(48, 45, 42, 0.3);
+}
+
+/* Minor ticks (every 2.5%) */
+.tickMinor .tickLine {
+  width: 3px;
+  background-color: rgba(48, 45, 42, 0.16);
+}
+
+/* Adaptive Light Tone on Dark Backgrounds */
+.tickLight .tickLine {
+  background-color: rgba(250, 248, 245, 0.45);
+}
+
+.tickLight.tickMajor .tickLine {
+  width: 12px;
+  background-color: #FAF8F5;
+}
+
+.tickLight.tickMedium .tickLine {
+  width: 6px;
+  background-color: rgba(250, 248, 245, 0.7);
+}
+
+.tickLight.tickMinor .tickLine {
+  width: 3px;
+  background-color: rgba(250, 248, 245, 0.35);
+}
+
+/* Hover effect on entire ruler */
+.rulerWrapper:hover .tickMajor .tickLine {
+  background-color: rgba(48, 45, 42, 0.85);
+}
+
+.rulerWrapper:hover .tickLight.tickMajor .tickLine {
+  background-color: #FFFFFF;
+}
+
+/* The Active Indicator (A pure dash/traço + minimal number) */
+.activeIndicator {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+  will-change: top;
+}
+
+/* Minimalist inline number */
+.activeValue {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-right: 5px;
+  text-shadow: 0 1px 3px rgba(250, 248, 245, 0.8);
+}
+
+/* Clean straight dash/traço flush to the edge */
+.activeDash {
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* Hide on mobile devices */
+@media (max-width: 1024px) {
+  .rulerWrapper {
+    display: none;
+  }
+}

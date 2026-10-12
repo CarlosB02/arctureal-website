@@ -1,0 +1,255 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: clamp(440px, 55vh, 600px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-dark);
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 25, 24, 0.45) 0%,
+    rgba(26, 25, 24, 0.72) 60%,
+    rgba(26, 25, 24, 0.90) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 780px;
+  padding-top: clamp(4rem, 8vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.heroEyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #FFFFFF;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.heroLead {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+  font-weight: 300;
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 4.5rem;
+  align-items: start;
+}
+
+/* Info Side */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.infoCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  padding: 2.5rem;
+}
+
+.infoSectionTitle {
+  font-size: 0.775rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItemTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: 0.35rem;
+}
+
+.infoItemValue {
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.infoItemLink {
+  color: var(--color-dark);
+  font-weight: 500;
+  transition: color var(--transition-smooth);
+}
+
+.infoItemLink:hover {
+  color: var(--color-primary);
+}
+
+.transportNote {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Form Side */
+.formCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.775rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-primary);
+  background-color: #FFFFFF;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.successMessage {
+  padding: 2rem;
+  background-color: #F8F6F0;
+  border-left: 3px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-dark);
+}
+
+.successText {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

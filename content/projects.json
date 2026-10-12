@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "casa-das-pedras",
+    "title": "Casa das Pedras",
+    "subtitle": "Habitação unifamiliar em diálogo com a falésia",
+    "category": "Habitação",
+    "year": "2024",
+    "location": "Sintra, Portugal",
+    "company": "Arctureal Studio",
+    "area": "640 m²",
+    "status": "Concluído",
+    "featured": true,
+    "summary": "Um volume escultórico em betão aparente e pedra calcária nacional, que se funde com a orografia natural preservando a vista panorâmica para o Atlântico.",
+    "description": "A Casa das Pedras nasce da intenção de repousar serenamente sobre uma encosta virada a poente. Desenhada pelo atelier Arctureal Studio, o programa organiza-se em dois corpos horizontais que protegem o pátio central dos ventos marítimos. Os vãos amplos em caixilharia esbelta filtram a luz atlântica, enquanto os materiais brutos — pedra de lioz bujardada, madeira de carvalho e superfícies minerais — conferem uma sensação de permanência e abrigo.",
+    "specs": [
+      { "label": "Cliente", "value": "Privado" },
+      { "label": "Arquitetura", "value": "Arctureal Studio" },
+      { "label": "Interiores", "value": "Arctureal Living" },
+      { "label": "Coordenação de Engenharia", "value": "Arctureal Engineering" },
+      { "label": "Fotografia de Referência", "value": "Arquivo Arctureal" }
+    ],
+    "image": "/images/projects/casa-das-pedras.svg",
+    "gallery": [
+      "/images/projects/casa-das-pedras.svg",
+      "/images/projects/casa-das-pedras-interior.svg",
+      "/images/projects/casa-das-pedras-patio.svg"
+    ],
+    "todo": "TODO: Substituir plantas técnicas e fotografia de reportagem de verão assim que validadas pelo proprietário."
+  },
+  {
+    "slug": "edificio-marques-horizon",
+    "title": "Edifício Marquês Horizon",
+    "subtitle": "Sede corporativa sustentável e espaços de trabalho",
+    "category": "Comercial",
+    "year": "2023",
+    "location": "Avenida da Liberdade, Lisboa",
+    "company": "Arctureal Studio",
+    "area": "4.200 m²",
+    "status": "Concluído",
+    "featured": true,
+    "summary": "Reabilitação integral de um edifício da primeira metade do século XX com fachada cinética energeticamente eficiente e terraço bioclimático.",
+    "description": "No coração de Lisboa, a intervenção no Marquês Horizon conciliou o respeito pela memória tectónica com os mais exigentes padrões de desempenho ambiental BREEAM Outstanding. As lâminas verticais de sombreamento em alumínio anodizado dourado-terra dialogam com o cromatismo da pedra circundante, criando um jogo contínuo de sombras no interior dos pisos de trabalho flexíveis.",
+    "specs": [
+      { "label": "Tipologia", "value": "Escritórios & Serviços" },
+      { "label": "Certificação", "value": "BREEAM Outstanding" },
+      { "label": "Arquitetura", "value": "Arctureal Studio" },
+      { "label": "Engenharia e Estruturas", "value": "Arctureal Engineering" }
+    ],
+    "image": "/images/projects/marques-horizon.svg",
+    "gallery": [
+      "/images/projects/marques-horizon.svg",
+      "/images/projects/marques-horizon-facade.svg"
+    ],
+    "todo": "TODO: Inserir medições acústicas finais e relatório de eficiência energética no anexo do projeto."
+  },
+  {
+    "slug": "quinta-do-monte-resort",
+    "title": "Quinta do Monte Resort & Spa",
+    "subtitle": "Hotelaria de refúgio e enoturismo de baixa densidade",
+    "category": "Hotelaria",
+    "year": "2025",
+    "location": "Alentejo Central, Portugal",
+    "company": "Arctureal Urban & Living",
+    "area": "9.800 m²",
+    "status": "Em Construção",
+    "featured": true,
+    "summary": "Vinte e quatro pavilhões modulares de taipa e cortiça que se camuflam entre o montado de sobreiros e vinhas ancestrais.",
+    "description": "Privilegiando a pegada de carbono quase neutra, a Quinta do Monte redefine a experiência de hospitalidade no Alentejo. A implantação curva segue as curvas de nível do terreno sem abater um único sobreiro. O sistema construtivo em terra estabilizada assegura inércia térmica passiva, complementado por coberturas verdes com flora autóctone e piscinas de tratamento biológico.",
+    "specs": [
+      { "label": "Unidades", "value": "24 Pavilhões + Edifício Central" },
+      { "label": "Masterplan", "value": "Arctureal Urban" },
+      { "label": "Design de Interiores", "value": "Arctureal Living" },
+      { "label": "Sustentabilidade", "value": "Zero Net Carbon Target" }
+    ],
+    "image": "/images/projects/quinta-do-monte.svg",
+    "gallery": [
+      "/images/projects/quinta-do-monte.svg",
+      "/images/projects/quinta-do-monte-pavilhao.svg"
+    ],
+    "todo": "TODO: Atualizar render 3D com o acabamento final de taipa comprimida aprovado na última visita a obra."
+  },
+  {
+    "slug": "regeneracao-docas-alcantara",
+    "title": "Docas Alcântara Hub",
+    "subtitle": "Regeneração ribeirinha e espaço criativo urbano",
+    "category": "Regeneração Urbana",
+    "year": "2024",
+    "location": "Alcântara, Lisboa",
+    "company": "Arctureal Urban",
+    "area": "12.500 m²",
+    "status": "Em Projeto",
+    "featured": true,
+    "summary": "Reconversão de antigos armazéns industriais em polos de inovação, praças públicas e acesso contínuo à frente de rio.",
+    "description": "Um exercício de costura urbana entre a ferrovia e o Tejo. A proposta do grupo Arctureal valoriza as estruturas em ferro forjado e tijolo maciço, pontuando o espaço com novas estruturas transparentes e passeios pedonais arborizados que devolvem o usufruto da margem à cidade.",
+    "specs": [
+      { "label": "Programa", "value": "Cultura, Coworking & Gastronomia" },
+      { "label": "Promotor", "value": "Consórcio Público-Privado" },
+      { "label": "Masterplanning", "value": "Arctureal Urban" }
+    ],
+    "image": "/images/projects/docas-alcantara.svg",
+    "gallery": [
+      "/images/projects/docas-alcantara.svg"
+    ],
+    "todo": "TODO: Aguardar aprovação do parecer camarário para publicação do modelo paramétrico integral."
+  },
+  {
+    "slug": "residencia-monte-estoril",
+    "title": "Residência Monte Estoril",
+    "subtitle": "Reinterpretação minimalista da arquitetura de veraneio",
+    "category": "Habitação",
+    "year": "2023",
+    "location": "Cascais / Estoril",
+    "company": "Arctureal Living",
+    "area": "520 m²",
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Ambientes fluídos e depurados onde a marcenaria em nogueira e o mármore travertino criam uma atmosfera intimista e repousante.",
+    "description": "Intervenção cirúrgica de interiores e expansão volumétrica de uma moradia dos anos 60. O atelier Arctureal Living desenvolveu cada peça de carpintaria e iluminação integrada à medida, eliminando ruídos visuais e enquadrando os jardins de espécies mediterrânicas.",
+    "specs": [
+      { "label": "Área de Interiores", "value": "520 m²" },
+      { "label": "Mobiliário à Medida", "value": "Coleção Exclusiva Arctureal" },
+      { "label": "Execução", "value": "Arctureal Living" }
+    ],
+    "image": "/images/projects/monte-estoril.svg",
+    "gallery": [
+      "/images/projects/monte-estoril.svg"
+    ],
+    "todo": "TODO: Incluir entrevista aos curadores de iluminação e artesãos de carpintaria."
+  },
+  {
+    "slug": "pavilhao-da-luz",
+    "title": "Pavilhão da Luz & Galeria",
+    "subtitle": "Espaço expositivo e fundação de arte contemporânea",
+    "category": "Comercial",
+    "year": "2024",
+    "location": "Porto, Portugal",
+    "company": "Arctureal Studio",
+    "area": "1.850 m²",
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Uma claraboia contínua de 40 metros banha de luz difusa o piso térreo monomaterial em microcimento e granito polido.",
+    "description": "O projeto explora a luz do Norte como elemento construtivo primordial. Com traço purista e proporções quase místicas, o Pavilhão da Luz foi concebido para acolher grandes instalações escultóricas com neutralidade e clareza de percursos.",
+    "specs": [
+      { "label": "Tipologia", "value": "Fundação & Museu" },
+      { "label": "Arquitetura", "value": "Arctureal Studio" },
+      { "label": "Consultoria Luminotécnica", "value": "Arctureal Engineering" }
+    ],
+    "image": "/images/projects/pavilhao-da-luz.svg",
+    "gallery": [
+      "/images/projects/pavilhao-da-luz.svg"
+    ],
+    "todo": "TODO: Adicionar catálogo da exposição inaugural com curadoria dos artistas convidados."
+  }
+]
