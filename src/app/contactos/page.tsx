@@ -37,7 +37,7 @@ export default function ContactosPage() {
       <section className={styles.hero} aria-labelledby="contactos-title">
         <div className={styles.heroBackground}>
           <Image
-            src="/images/contactos-hero.jpg"
+            src="/images/contactos-hero.webp"
             alt="Atelier e sede institucional da Arctureal na Estrada da Luz, Lisboa"
             fill
             priority

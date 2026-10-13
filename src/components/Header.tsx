@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
@@ -12,6 +13,7 @@ interface HeaderProps {
 export default function Header({ navigation }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const pathname = usePathname();
 
   const isHome = pathname === "/";
@@ -61,12 +63,25 @@ export default function Header({ navigation }: HeaderProps) {
     <header className={headerClass}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} aria-label="ARCTUREAL - Página Inicial">
-          <span
-            className={`${styles.brandName} ${isDarkTheme ? styles.brandNameLight : styles.brandNameDark
+          {!logoError ? (
+            <Image
+              src="/images/logo.webp"
+              alt="ARCTUREAL"
+              width={160}
+              height={36}
+              priority
+              className={styles.brandLogo}
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <span
+              className={`${styles.brandName} ${
+                isDarkTheme ? styles.brandNameLight : styles.brandNameDark
               }`}
-          >
-            ARCTUREAL
-          </span>
+            >
+              ARCTUREAL
+            </span>
+          )}
         </Link>
 
         {/* Desktop Navigation */}

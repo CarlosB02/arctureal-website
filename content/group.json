@@ -1,16 +1,16 @@
 {
   "heading": "O Ecossistema Arctureal",
-  "subheading": "Uma marca-mãe que reúne empresas especializadas, partilhando o mesmo compromisso com o rigor construtivo e o design de permanência.",
-  "philosophy": "A ARCTUREAL funciona como a estrutura agregadora e estratégica de várias empresas focadas na cadeia de valor do ambiente construído. Em vez de uma abordagem generalista, cada entidade do grupo detém autonomia criativa e técnica profunda no seu domínio, potenciando sinergias multidisciplinares imediatas.",
+  "subheading": "Estrutura integrada de arquitetura e investimento com sede em Lisboa. Desenvolvimento imobiliário, hotelaria, gestão e internacionalização com um só interlocutor do início ao fim.",
+  "philosophy": "A ARCTUREAL funciona como uma estrutura multidisciplinar e integrada, abrangendo toda a cadeia de valor do ambiente construído. Articulamos conceção arquitetónica, investimento e execução técnica para assegurar consistência, rigor e qualidade sem intermediários.",
   "hero": {
     "eyebrow": "Quem Somos & O Coletivo",
     "title": "O Ecossistema Arctureal",
-    "image": "/images/areas/visao-missao.jpg"
+    "image": "/images/areas/visao-missao.webp"
   },
   "intro": {
     "eyebrow": "Quem Somos",
-    "title": "Um grupo, um só interlocutor",
-    "text": "A ARCTUREAL reúne várias empresas ligadas à construção, do investimento ao projeto e à obra. Cada uma mantém a sua autonomia técnica e criativa, e todas trabalham em conjunto para que o cliente tenha um único interlocutor, do primeiro traço à entrega da chave.",
+    "title": "Um coletivo, um só interlocutor",
+    "text": "A ARCTUREAL atua transversalmente no setor do ambiente construído, desde a estratégia de investimento e conceção arquitetónica até à fiscalização e entrega final da obra. Asseguramos uma metodologia coesa onde cada área de atuação colabora em total sinergia, garantindo ao cliente um único interlocutor de referência.",
     "highlights": [
       {
         "label": "Anos de Experiência",
@@ -21,47 +21,81 @@
         "value": "Internacional"
       },
       {
-        "label": "Foco de Investimento",
-        "value": "Imobiliário & Hotelaria"
+        "label": "Foco de Atuação",
+        "value": "5 Áreas Integradas"
       }
     ]
   },
-  "companiesSection": {
-    "title": "Empresas Parceiras",
-    "subtitle": "Equipas dedicadas com mestria comprovada nas suas respetivas áreas de atuação."
+  "areasSection": {
+    "eyebrow": "Áreas de Atuação",
+    "title": "Especialização Integrada",
+    "subtitle": "Uma abordagem transversal que articula conceção arquitetónica, estratégia de investimento e capacidade de execução técnica em cinco pilares determinantes."
   },
-  "companies": [
+  "areas": [
     {
-      "id": "arctureal-studio",
+      "id": "imobiliario",
       "index": "01",
-      "name": "Arctureal Studio",
-      "badge": "Imobiliário",
-      "description": "Desenvolvimento de projetos residenciais, do terreno à entrega da chave.",
-      "image": "/images/areas/imobiliario.jpg"
+      "title": "Imobiliário",
+      "tagline": "Desenvolvimento residencial",
+      "description": "Desenvolvemos projetos residenciais do estudo inicial à entrega da chave, para habitação própria ou investimento. Damos prioridade a bons materiais, ao conforto e a uma arquitetura que dure.",
+      "image": "/images/areas/imobiliario.webp",
+      "highlights": [
+        "Desenvolvimento de raiz",
+        "Materiais naturais e duradouros",
+        "Eficiência energética"
+      ]
     },
     {
-      "id": "arctureal-living",
+      "id": "hotelaria",
       "index": "02",
-      "name": "Arctureal Turism",
-      "badge": "Hotelaria",
-      "description": "Criação e gestão de unidades hoteleiras com identidade própria, pensadas para durar e para quem as visita.",
-      "image": "/images/areas/hotelaria.jpg"
+      "title": "Hotelaria",
+      "tagline": "Hotéis, turismo rural, resorts & hospitalidade",
+      "description": "Criamos e reabilitamos unidades hoteleiras integradas na paisagem e no património à sua volta. Arquitetura e interiores pensados em conjunto, para quem visita e para quem investe.",
+      "image": "/images/areas/hotelaria.webp",
+      "highlights": [
+        "Hotéis boutique urbanos",
+        "Turismo rural e enoturismo",
+        "Paisagismo e bem-estar"
+      ]
     },
     {
-      "id": "arctureal-urban",
+      "id": "investimentos",
       "index": "03",
-      "name": "Arctureal Invest",
-      "badge": "Investimentos",
-      "description": "Oportunidades de investimento e copromoção imobiliária para investidores privados, family offices e instituições.",
-      "image": "/images/areas/investimentos.jpg"
+      "title": "Investimentos",
+      "tagline": "Estruturação de ativos, viabilidade & copromoção imobiliária",
+      "description": "Estruturamos oportunidades de investimento imobiliário para investidores privados, family offices e instituições. Cada projeto começa com um plano de negócio claro e uma análise de riscos feita antes de investir.",
+      "image": "/images/areas/investimentos.webp",
+      "highlights": [
+        "Copromoção e capital estruturado",
+        "Estudos de viabilidade",
+        "Previsibilidade de retorno e margem"
+      ]
     },
     {
-      "id": "arctureal-engineering",
+      "id": "gestao-servicos",
       "index": "04",
-      "name": "Arctureal Internacional",
-      "badge": "Internacionalização",
-      "description": "Expansão dos projetos do grupo para além de Portugal, com parceiros locais e a mesma exigência em cada mercado.",
-      "image": "/images/areas/internacional-hub.jpg"
+      "title": "Gestão e Serviços",
+      "tagline": "Gestão de projetos, imóveis e serviços de apoio",
+      "description": "Damos apoio técnico e administrativo a projetos e imóveis, do licenciamento à gestão do dia a dia. Cuidamos dos processos, dos prazos e dos custos, para que cada ativo funcione bem e mantenha o seu valor.",
+      "image": "/images/areas/gestao-servicos.webp",
+      "highlights": [
+        "Licenciamentos e processos administrativos",
+        "Gestão de projetos e de imóveis",
+        "Otimização de prazos e orçamentos"
+      ]
+    },
+    {
+      "id": "internacional",
+      "index": "05",
+      "title": "Internacional",
+      "tagline": "Projeção global & alianças estratégicas",
+      "description": "Levamos a forma de construir da Arctureal a outros mercados, com parceiros locais no estrangeiro. Adaptamos cada projeto às regras locais, sem perder a identidade do grupo.",
+      "image": "/images/areas/internacional-hub.webp",
+      "highlights": [
+        "Mercados europeus e internacionais",
+        "Parcerias com agentes locais",
+        "Rigor normativo e padrões internacionais"
+      ]
     }
   ],
   "cta": {

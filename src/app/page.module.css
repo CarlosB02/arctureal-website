@@ -237,15 +237,29 @@
   background-color: #242220;
   color: #FAF8F5;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(192, 132, 64, 0.2);
   position: relative;
   overflow: hidden;
+}
+
+.metricsRibbonSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/padrao-losangos-1920x1080.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 1920px auto;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .metricsRibbonInner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
+  z-index: 1;
 }
 
 .metricBlock {
@@ -436,7 +450,20 @@
   color: var(--color-text-main);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid var(--color-border);
+  border-top: none;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/padrao-losangos-1920x1080.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 1920px auto;
+  opacity: 0.055;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .ctaInner {
@@ -446,6 +473,8 @@
   text-align: center;
   max-width: 1040px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .ctaTitle {

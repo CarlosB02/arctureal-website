@@ -31,9 +31,17 @@
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 0.15rem;
   text-decoration: none;
+}
+
+.brandLogo {
+  height: clamp(24px, 3.2vw, 32px);
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
 }
 
 .brandName {

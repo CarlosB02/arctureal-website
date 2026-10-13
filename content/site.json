@@ -1,9 +1,9 @@
 {
   "brand": {
     "name": "ARCTUREAL",
-    "subtitle": "Marca-Mãe de Arquitetura",
-    "tagline": "Grupo de empresas de imobiliário, hotelaria, investimentos, gestão e serviços e internacionalização. Um só interlocutor, do primeiro esboço à entrega.",
-    "mission": "Unir mestria técnica, rigor construtivo e sensibilidade intemporal num ecossistema colaborativo de empresas de arquitetura.",
+    "subtitle": "Imobiliário, Hotelaria e Investimento",
+    "tagline": "Estrutura integrada com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
+    "mission": "Desenvolvimento imobiliário, hotelaria e investimento com rigor e acompanhamento integral.",
     "yearFounded": 2014,
     "siteUrl": "https://www.arctureal.com"
   },
@@ -42,11 +42,7 @@
   "socials": [
     {
       "label": "LinkedIn",
-      "url": "https://www.linkedin.com/company/arctureal"
-    },
-    {
-      "label": "Instagram",
-      "url": "https://www.instagram.com/arctureal"
+      "url": "https://www.linkedin.com/company/arctureal/home/"
     }
   ],
   "footer": {

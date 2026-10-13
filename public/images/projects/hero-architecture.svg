@@ -42,7 +42,7 @@
 
   <!-- Header Annotations -->
   <text x="70" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#302D2A">ARCTUREAL ARCHIVE / ECOSSISTEMA DE ARQUITETURA</text>
-  <text x="1130" y="75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" letter-spacing="2" fill="#6E6962">MARCA-MÃE — SÍNTESE ESPACIAL</text>
+  <text x="1130" y="75" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" letter-spacing="2" fill="#6E6962">GRUPO ARCTUREAL — LISBOA</text>
 
   <!-- Title Bottom Annotation -->
   <text x="70" y="680" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#302D2A">ARCTUREAL ARCHITECTURE</text>

@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* Background Architectural Photography */}
         <div className={styles.heroBackground}>
           <Image
-            src="/images/hero-architecture.jpg"
+            src="/images/hero-architecture.webp"
             alt="Obra de arquitetura minimalista com pedra de calcário, betão aparente e espelho de água ao pôr do sol"
             fill
             priority

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Project } from "@/lib/content";
 import styles from "./Projects.module.css";
 
@@ -51,20 +50,15 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
       <div className={styles.projectsGrid}>
         {filteredProjects.map((project) => (
           <article key={project.slug} className={styles.projectCard}>
-            <Link
-              href={`/projetos/${project.slug}`}
-              className={styles.imageContainer}
-              tabIndex={-1}
-              aria-hidden="true"
-            >
+            <div className={styles.imageContainer}>
               <Image
                 src={project.image}
-                alt={`Representação visual do projeto ${project.title} - ${project.location}`}
+                alt={`Representação visual do projeto ${project.title}`}
                 width={1200}
                 height={750}
                 loading="lazy"
               />
-            </Link>
+            </div>
 
             <div className={styles.cardBody}>
               <div className={styles.metaRow}>
@@ -72,18 +66,11 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
                 <span>{project.year}</span>
               </div>
 
-              <h2 className={styles.projectTitle}>
-                <Link href={`/projetos/${project.slug}`}>
-                  {project.title}
-                </Link>
-              </h2>
+              <h3 className={styles.projectTitle}>
+                {project.title}
+              </h3>
 
               <p className={styles.projectSubtitle}>{project.subtitle}</p>
-
-              <div className={styles.cardFooter}>
-                <span>{project.location} &bull; {project.area}</span>
-                <span style={{ color: "var(--color-primary)" }}>{project.company}</span>
-              </div>
             </div>
           </article>
         ))}

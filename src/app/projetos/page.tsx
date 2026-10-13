@@ -141,7 +141,7 @@ export default function ProjectsPage() {
               <div className={styles.cycleCardBody}>
                 <h3 className={styles.cycleCardTitle}>Análise e viabilidade</h3>
                 <p className={styles.cycleCardDesc}>
-                  Identificamos oportunidades, analisamos a situação jurídica e urbanística e preparamos o plano de negócio, com diferentes cenários.
+                  Identificamos e analisamos oportunidades de investimento, avaliando o potencial, os riscos e a viabilidade de cada uma.
                 </p>
                 <span className={styles.cycleCardTag}>Análise</span>
               </div>
@@ -159,11 +159,11 @@ export default function ProjectsPage() {
                 <span className={styles.cycleCardIndex}>02</span>
               </div>
               <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Conceção &amp; Licenciamento</h3>
+                <h3 className={styles.cycleCardTitle}>Estruturação</h3>
                 <p className={styles.cycleCardDesc}>
-                  Desenvolvimento de arquitetura autoral com otimização volumétrica e espacial, articulando os projetos com os municípios para assegurar aprovações céleres.
+                  Definimos o plano de negócio, o modelo de investimento e os parceiros certos para cada projeto.
                 </p>
-                <span className={styles.cycleCardTag}>Arquitetura de Autor</span>
+                <span className={styles.cycleCardTag}>Estratégia</span>
               </div>
             </div>
 
@@ -179,28 +179,50 @@ export default function ProjectsPage() {
                 <span className={styles.cycleCardIndex}>03</span>
               </div>
               <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Projeto e licenciamento</h3>
+                <h3 className={styles.cycleCardTitle}>Valorização e retorno</h3>
                 <p className={styles.cycleCardDesc}>
-                  Desenvolvemos o projeto de arquitetura e acompanhamos o licenciamento junto da câmara municipal.
+                  Acompanhamos o ativo até ao fim, seja por venda, arrendamento ou exploração, com informação regular ao investidor.
                 </p>
-                <span className={styles.cycleCardTag}>Projeto</span>
+                <span className={styles.cycleCardTag}>Retorno</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Portfolio Section */}
+      {/* Projects Portfolio Section with Sticky 3D Parallax Background */}
       <section className={styles.projectsSection} aria-label="Arquivo de Obras e Projetos de Arquitetura">
-        <div className="container">
-          <div className={styles.projectsHeader}>
-            <span className={styles.cycleEyebrow}>Obra e retorno</span>
-            <h2 className={styles.projectsTitle}>Arquivo de Obras</h2>
-            <p className={styles.projectsLead}>
-              Gerimos a obra e os custos até à conclusão, seguindo-se a venda ou a gestão do ativo.
-            </p>
+        {/* Sticky Background Track & Canvas */}
+        <div className={styles.stickyBackgroundTrack} aria-hidden="true">
+          <div className={styles.stickyBackground}>
+            <div className={styles.stickyMediaContainer}>
+              <Image
+                src="/images/hero-architecture.webp"
+                alt=""
+                fill
+                sizes="100vw"
+                quality={85}
+                className={styles.stickyImage}
+              />
+              <div className={styles.stickyOverlay} />
+              <div className={styles.stickyTopography} />
+              <div className={styles.stickyAmbientGlow} />
+            </div>
           </div>
-          <ProjectsList projects={projects} />
+        </div>
+
+        {/* Foreground Content */}
+        <div className={styles.projectsContent}>
+          <div className="container">
+            <div className={styles.projectsHeader}>
+              <span className={styles.cycleEyebrow}>PORTFÓLIO DE PROJETOS</span>
+              <h2 className={styles.projectsTitle}>Arquivo de Obras</h2>
+              <p className={styles.projectsLead}>
+                Uma seleção de estudos prévios, edifícios construídos e intervenções espaciais desenvolvidas com rigor e identidade pelo coletivo Arctureal.
+              </p>
+            </div>
+            <ProjectsList projects={projects} />
+          </div>
         </div>
       </section>
     </>

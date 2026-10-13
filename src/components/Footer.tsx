@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getSiteConfig } from "@/lib/content";
 import styles from "./Footer.module.css";
 
@@ -16,7 +17,15 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Marca */}
           <div className={styles.colBrand}>
-            <span className={styles.brandTitle}>{site.brand.name}</span>
+            <Link href="/" className={styles.brandLink} aria-label="ARCTUREAL - Início">
+              <Image
+                src="/images/logo.webp"
+                alt={site.brand.name}
+                width={170}
+                height={38}
+                className={styles.brandLogo}
+              />
+            </Link>
             <p className={styles.brandDesc}>{site.brand.tagline}</p>
             <div className={styles.brandGroup}>
               <span className={styles.brandGroupLine} />

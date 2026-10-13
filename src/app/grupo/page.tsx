@@ -9,14 +9,14 @@ import styles from "./Grupo.module.css";
 export const metadata: Metadata = {
   title: "Quem Somos & O Grupo — ARCTUREAL",
   description:
-    "A ARCTUREAL é uma marca-mãe de referência que integra a Arctureal Properties e empresas especializadas em arquitetura de autor, interiores, urbanismo e engenharia.",
+    "Coletivo e ecossistema integrado em Lisboa: conceção arquitetónica de autor, hotelaria, investimento imobiliário, gestão de obras e projeção internacional.",
   alternates: {
     canonical: "/grupo",
   },
   openGraph: {
     title: "Quem Somos & O Grupo | ARCTUREAL",
     description:
-      "Descubra o ecossistema Arctureal: promoção imobiliária de autor e ateliers especializados com interlocutor único.",
+      "Coletivo e ecossistema integrado em Lisboa: conceção arquitetónica de autor, hotelaria, investimento imobiliário, gestão de obras e projeção internacional.",
     url: "https://www.arctureal.com/grupo",
   },
 };
@@ -30,10 +30,10 @@ export default function GrupoPage() {
   ];
 
   const heroData = group.hero || {
-    eyebrow: "Marca-Mãe & Estrutura",
+    eyebrow: "O Coletivo & Estrutura",
     title: group.heading,
     subtitle: group.subheading,
-    image: "/images/areas/visao-missao.jpg",
+    image: "/images/areas/visao-missao.webp",
   };
 
   const introData = group.intro || {
@@ -42,11 +42,13 @@ export default function GrupoPage() {
     text: group.philosophy,
   };
 
-  const companiesHeader = group.companiesSection || {
-    eyebrow: "Entidades Integradas",
-    title: "Empresas Especializadas",
-    subtitle: "Equipas dedicadas com mestria comprovada nas suas respetivas áreas de atuação.",
+  const areasHeader = group.areasSection || {
+    eyebrow: "Áreas de Atuação",
+    title: "Especialização Integrada",
+    subtitle: "Uma abordagem transversal que articula conceção arquitetónica, estratégia de investimento e capacidade de execução em cinco pilares determinantes.",
   };
+
+  const areasList = group.areas || [];
 
   const ctaData = group.cta || {
     title: "Tem um projeto em mente?",
@@ -85,7 +87,7 @@ export default function GrupoPage() {
         </div>
       </section>
 
-      {/* 2. Intro Statement Section (Simple text below hero) */}
+      {/* 2. Intro Statement Section */}
       <section className={styles.introSection} aria-labelledby="grupo-intro-title">
         <div className="container">
           <div className={styles.introGrid}>
@@ -114,89 +116,78 @@ export default function GrupoPage() {
         </div>
       </section>
 
-      {/* 3. Companies Presentation Grid with Images & KPIs */}
-      <section className={styles.companiesSection} aria-labelledby="companies-title">
+      {/* 3. Áreas de Atuação - Presentation Grid */}
+      <section className={styles.areasSection} aria-labelledby="areas-title">
         <div className="container">
           <div className={styles.sectionHeader}>
-            {companiesHeader.eyebrow && (
-              <span className={styles.sectionEyebrow}>{companiesHeader.eyebrow}</span>
+            {areasHeader.eyebrow && (
+              <span className={styles.sectionEyebrow}>{areasHeader.eyebrow}</span>
             )}
-            <h2 id="companies-title" className={styles.sectionTitle}>
-              {companiesHeader.title}
+            <h2 id="areas-title" className={styles.sectionTitle}>
+              {areasHeader.title}
             </h2>
-            {companiesHeader.subtitle && (
-              <p className={styles.sectionSubtitle}>{companiesHeader.subtitle}</p>
+            {areasHeader.subtitle && (
+              <p className={styles.sectionSubtitle}>{areasHeader.subtitle}</p>
             )}
           </div>
 
-          <div className={styles.companiesGrid}>
-            {group.companies.map((company, index) => (
-              <article
-                key={company.id}
-                id={company.id}
-                className={styles.companyCard}
-                aria-labelledby={`company-title-${company.id}`}
-              >
-                {/* Image Banner */}
-                <div className={styles.cardImageBox}>
-                  <Image
-                    src={company.image}
-                    alt={`Atividade e projetos da ${company.name}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className={styles.cardImage}
-                    priority={index < 2}
-                  />
-                  <div className={styles.cardImageScrim} />
-
-                  <span className={styles.cardIndex}>
-                    {company.index || `0${index + 1}`}
-                  </span>
-
-                  {company.badge && (
-                    <span className={styles.cardBadge}>{company.badge}</span>
-                  )}
-                </div>
-
-                {/* Card Content */}
-                <div className={styles.cardBody}>
-                  <div className={styles.cardHeader}>
-                    <h3 id={`company-title-${company.id}`} className={styles.cardTitle}>
-                      {company.name}
-                    </h3>
-                    {company.tagline && (
-                      <span className={styles.cardTagline}>{company.tagline}</span>
-                    )}
+          <div className={styles.areasGrid}>
+            {areasList.map((area, index) => {
+              const isWide = index === 4; // Area 05 (Internacional)
+              return (
+                <article
+                  key={area.id}
+                  id={area.id}
+                  className={`${styles.areaCard} ${isWide ? styles.areaCardWide : ""}`}
+                  aria-labelledby={`area-title-${area.id}`}
+                >
+                  {/* Image Banner */}
+                  <div className={styles.cardImageBox}>
+                    <Image
+                      src={area.image}
+                      alt={`Fotografia representativa da área ${area.title}`}
+                      fill
+                      sizes={isWide ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+                      className={styles.cardImage}
+                      priority={index < 2}
+                    />
+                    <div className={styles.cardImageScrim} />
+                    <span className={styles.cardIndex}>{area.index}</span>
                   </div>
 
-                  <p className={styles.cardDesc}>{company.description}</p>
-
-                  {/* Compact KPI Indicators */}
-                  {company.kpis && company.kpis.length > 0 && (
-                    <div className={styles.kpiGrid}>
-                      {company.kpis.map((kpi, kpiIdx) => (
-                        <div key={kpiIdx} className={styles.kpiItem}>
-                          <span className={styles.kpiValue}>{kpi.value}</span>
-                          <span className={styles.kpiLabel}>{kpi.label}</span>
-                        </div>
-                      ))}
+                  {/* Card Body */}
+                  <div className={styles.cardBody}>
+                    <div className={styles.cardHeader}>
+                      <h3 id={`area-title-${area.id}`} className={styles.cardTitle}>
+                        {area.title}
+                      </h3>
+                      {area.tagline && (
+                        <p className={styles.cardTagline}>{area.tagline}</p>
+                      )}
                     </div>
-                  )}
 
-                  {/* Action Link (apenas se existir link no JSON) */}
-                  {company.link && (
+                    <p className={styles.cardDesc}>{area.description}</p>
+
+                    {area.highlights && area.highlights.length > 0 && (
+                      <ul className={styles.highlightsList}>
+                        {area.highlights.map((point, pIdx) => (
+                          <li key={pIdx} className={styles.highlightBullet}>
+                            <span className={styles.bulletDot} />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
                     <div className={styles.cardFooter}>
-                      <Link
-                        href={company.link}
-                        className={styles.cardLink}
-                      >
-                        {company.linkText || "Conhecer Projetos"} &rarr;
+                      <Link href="/contactos" className={styles.cardAction}>
+                        Consultar para {area.title} &rarr;
                       </Link>
                     </div>
-                  )}
-                </div>
-              </article>
-            ))}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

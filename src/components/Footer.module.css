@@ -47,6 +47,19 @@
   gap: 1.25rem;
 }
 
+.brandLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.brandLogo {
+  height: clamp(26px, 3.2vw, 34px);
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+}
+
 .brandTitle {
   font-family: var(--font-serif);
   font-size: 1.85rem;

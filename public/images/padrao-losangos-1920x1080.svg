@@ -35,5 +35,5 @@
   <polygon points="263.40,51.96 240.00,11.43 216.60,51.96 240.00,92.49"/>
   <polygon points="263.40,155.88 240.00,115.35 216.60,155.88 240.00,196.41"/>
 </g></pattern></defs>
-<rect width="1920" height="1080" fill="#ffffff"/><rect width="1920" height="1080" fill="url(#p)"/>
+<rect width="1920" height="1080" fill="none"/><rect width="1920" height="1080" fill="url(#p)"/>
 </svg>

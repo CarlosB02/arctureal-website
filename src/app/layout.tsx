@@ -24,17 +24,18 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arctureal.com"),
   title: {
-    default: "ARCTUREAL — Marca-Mãe de Arquitetura",
+    default: "Arctureal — Imobiliário, Hotelaria e Investimento",
     template: "%s | ARCTUREAL",
   },
   description:
-    "Marca-mãe de arquitetura contemporânea agregando empresas especializadas em conceção espacial, interiores de autor, engenharia e estratégia territorial.",
+    "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
   keywords: [
-    "arquitetura lisboa",
-    "marca-mãe de arquitetura",
-    "atelier de arquitetura",
-    "projetos de arquitetura portugal",
-    "design de interiores luxo",
+    "imobiliário lisboa",
+    "hotelaria portugal",
+    "investimento imobiliário",
+    "desenvolvimento imobiliário",
+    "grupo arctureal",
+    "projetos imobiliários",
     "arctureal",
   ],
   authors: [{ name: "ARCTUREAL" }],
@@ -44,23 +45,23 @@ export const metadata: Metadata = {
     locale: "pt_PT",
     url: "https://www.arctureal.com",
     siteName: "ARCTUREAL",
-    title: "ARCTUREAL — Marca-Mãe de Arquitetura",
+    title: "Arctureal — Imobiliário, Hotelaria e Investimento",
     description:
-      "Ecossistema de arquitetura agregando ateliers especializados em conceção, interiores e estratégia espacial com sede em Lisboa.",
+      "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
     images: [
       {
         url: "/images/projects/hero-architecture.svg",
         width: 1200,
         height: 750,
-        alt: "ARCTUREAL — Marca-Mãe de Arquitetura",
+        alt: "Arctureal — Imobiliário, Hotelaria e Investimento",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARCTUREAL — Marca-Mãe de Arquitetura",
+    title: "Arctureal — Imobiliário, Hotelaria e Investimento",
     description:
-      "Coletivo e marca-mãe de arquitetura contemporânea. Síntese, escala e intemporalidade.",
+      "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
     images: ["/images/projects/hero-architecture.svg"],
   },
   icons: {

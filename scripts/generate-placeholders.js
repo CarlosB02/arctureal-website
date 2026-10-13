@@ -170,7 +170,7 @@ const illustrations = [
   {
     filename: 'hero-architecture.svg',
     title: 'ARCTUREAL ARCHITECTURE',
-    coord: 'MARCA-MÃE — SÍNTESE ESPACIAL',
+    coord: 'GRUPO ARCTUREAL — LISBOA',
     type: 'ECOSSISTEMA DE ARQUITETURA',
     accent: '#C08440',
     draw: `

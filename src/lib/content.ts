@@ -59,6 +59,16 @@ export interface GroupPillar {
   text: string;
 }
 
+export interface GroupArea {
+  id: string;
+  index: string;
+  title: string;
+  tagline: string;
+  description: string;
+  image: string;
+  highlights?: string[];
+}
+
 export interface GroupData {
   heading: string;
   subheading: string;
@@ -66,7 +76,7 @@ export interface GroupData {
   hero?: {
     eyebrow: string;
     title: string;
-    subtitle: string;
+    subtitle?: string;
     image: string;
   };
   intro?: {
@@ -75,12 +85,18 @@ export interface GroupData {
     text: string;
     highlights?: { label: string; value: string }[];
   };
-  companiesSection?: {
-    eyebrow: string;
+  areasSection?: {
+    eyebrow?: string;
     title: string;
-    subtitle: string;
+    subtitle?: string;
   };
-  companies: GroupCompany[];
+  areas?: GroupArea[];
+  companiesSection?: {
+    eyebrow?: string;
+    title: string;
+    subtitle?: string;
+  };
+  companies?: GroupCompany[];
   pillars?: GroupPillar[];
   cta?: {
     title: string;
