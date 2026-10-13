@@ -20,6 +20,7 @@
 .heroImage {
   object-fit: cover;
   object-position: center;
+  filter: brightness(0.65);
 }
 
 .heroOverlay {
@@ -28,9 +29,9 @@
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(26, 25, 24, 0.45) 0%,
-    rgba(26, 25, 24, 0.72) 60%,
-    rgba(26, 25, 24, 0.90) 100%
+    rgba(18, 17, 16, 0.65) 0%,
+    rgba(18, 17, 16, 0.82) 55%,
+    rgba(18, 17, 16, 0.95) 100%
   );
 }
 
@@ -78,6 +79,33 @@
   color: rgba(255, 255, 255, 0.85);
   max-width: 650px;
   font-weight: 300;
+}
+
+/* Main Section with Lozenge Pattern Background */
+.contactSection {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  background-color: var(--color-bg);
+}
+
+.contactSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/padrao-losangos-1920x1080.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 1920px auto;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contactContainer {
+  position: relative;
+  z-index: 1;
 }
 
 .contactLayout {

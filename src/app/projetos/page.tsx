@@ -51,13 +51,10 @@ export default function ProjectsPage() {
 
         <div className="container" style={{ position: "relative", zIndex: 3, width: "100%" }}>
           <div className={`${styles.heroContent} animate-fade-in`}>
-            <span className={styles.heroEyebrow}>ARQUITETURA &amp; INVESTIMENTO</span>
             <h1 id="projetos-title" className={styles.heroTitle}>
               Projetos &amp; Investimentos
             </h1>
-            <p className={styles.heroLead}>
-              Conceção arquitetónica de excelência e originação de ativos imobiliários de alto valor. Unimos o rigor projetual à inteligência estratégica de capital.
-            </p>
+            <div className={styles.heroDivider} />
           </div>
         </div>
       </section>
@@ -72,28 +69,28 @@ export default function ProjectsPage() {
                 Estruturação Imobiliária &amp; Criação de Valor
               </h2>
               <p className={styles.investorLead}>
-                Criamos oportunidades exclusivas de copromoção e investimento direto para capitais privados, family offices e entidades institucionais, assegurando uma gestão verticalizada de cada ativo desde o terreno até à sua exploração.
+                Desenvolvemos oportunidades de copromoção e investimento direto para investidores privados, family offices e instituições. Acompanhamos cada ativo em todas as fases: aquisição, projeto, obra e exploração.
               </p>
 
               <div className={styles.investorPillarsList}>
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Localizações Prime &amp; Reabilitação:</strong> Seleção rigorosa de ativos em zonas consolidadas com elevado potencial de valorização a médio e longo prazo.
+                    <strong>Localização:</strong> Ativos em zonas consolidadas, com potencial de valorização a médio e longo prazo.
                   </div>
                 </div>
 
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Mitigação Integral de Risco:</strong> Due diligence jurídica e urbanística minuciosa, controlo orçamental em tempo real e licenciamento célere.
+                    <strong>Risco controlado:</strong> Análise jurídica e urbanística antes de investir, e acompanhamento rigoroso do orçamento.S
                   </div>
                 </div>
 
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Critérios ESG &amp; Eficiência Energética:</strong> Obras sustentáveis projetadas para obter certificações internacionais e otimizar custos operacionais futuros.
+                    <strong>Eficiência Energética:</strong> Obras pensadas para reduzir os custos de operação no futuro.
                   </div>
                 </div>
               </div>
@@ -142,11 +139,11 @@ export default function ProjectsPage() {
                 <span className={styles.cycleCardIndex}>01</span>
               </div>
               <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Originação &amp; Viabilidade</h3>
+                <h3 className={styles.cycleCardTitle}>Análise e viabilidade</h3>
                 <p className={styles.cycleCardDesc}>
-                  Prospeção qualificada de oportunidades no mercado, auditoria urbanística exaustiva e montagem de planos de negócio com cenários de sensibilidade detalhados.
+                  Identificamos oportunidades, analisamos a situação jurídica e urbanística e preparamos o plano de negócio, com diferentes cenários.
                 </p>
-                <span className={styles.cycleCardTag}>Due Diligence &amp; Capital</span>
+                <span className={styles.cycleCardTag}>Análise</span>
               </div>
             </div>
 
@@ -182,11 +179,11 @@ export default function ProjectsPage() {
                 <span className={styles.cycleCardIndex}>03</span>
               </div>
               <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Execução &amp; Retorno</h3>
+                <h3 className={styles.cycleCardTitle}>Projeto e licenciamento</h3>
                 <p className={styles.cycleCardDesc}>
-                  Direção e fiscalização de obra com gestão de custos rigorosa, culminando na colocação no mercado ou transição para gestão de ativos patrimoniais.
+                  Desenvolvemos o projeto de arquitetura e acompanhamos o licenciamento junto da câmara municipal.
                 </p>
-                <span className={styles.cycleCardTag}>Gestão &amp; Monetização</span>
+                <span className={styles.cycleCardTag}>Projeto</span>
               </div>
             </div>
           </div>
@@ -197,10 +194,10 @@ export default function ProjectsPage() {
       <section className={styles.projectsSection} aria-label="Arquivo de Obras e Projetos de Arquitetura">
         <div className="container">
           <div className={styles.projectsHeader}>
-            <span className={styles.cycleEyebrow}>PORTFÓLIO DE PROJETOS</span>
+            <span className={styles.cycleEyebrow}>Obra e retorno</span>
             <h2 className={styles.projectsTitle}>Arquivo de Obras</h2>
             <p className={styles.projectsLead}>
-              Uma seleção de estudos prévios, edifícios construídos e intervenções espaciais desenvolvidas com rigor e identidade pelo coletivo Arctureal.
+              Gerimos a obra e os custos até à conclusão, seguindo-se a venda ou a gestão do ativo.
             </p>
           </div>
           <ProjectsList projects={projects} />

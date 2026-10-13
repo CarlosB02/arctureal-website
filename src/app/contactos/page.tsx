@@ -51,21 +51,19 @@ export default function ContactosPage() {
 
         <div className="container" style={{ position: "relative", zIndex: 3, width: "100%" }}>
           <div className={`${styles.heroContent} animate-fade-in`}>
-            <span className={styles.heroEyebrow}>Atelier Central & Diálogo</span>
             <h1 id="contactos-title" className={styles.heroTitle}>
               Contacte a ARCTUREAL
             </h1>
             <p className={styles.heroLead}>
-              Estamos disponíveis para analisar novos projetos de arquitetura, consultorias de
-              interiores, planeamento urbano ou parcerias técnicas com promotores.
+              Um projeto, uma parceria ou uma simples pergunta. Teremos todo o gosto em ouvi-lo.
             </p>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="section-spacing">
-        <div className="container">
+      <section className={styles.contactSection}>
+        <div className={`container ${styles.contactContainer}`}>
           <div className={styles.contactLayout}>
             {/* Info Column */}
             <div className={styles.infoColumn}>
@@ -110,9 +108,9 @@ export default function ContactosPage() {
 
             {/* Form Column */}
             <div className={styles.formCard}>
-              <h2 className={styles.formTitle}>Formulário de Contacto</h2>
+              <h2 className={styles.formTitle}>Envie-nos uma mensagem</h2>
               <p className={styles.formSubtitle}>
-                Conte-nos o que tem em mente. Encaminhamos a sua mensagem para a empresa do grupo certa e respondemos em breve.
+                Conte-nos o que tem em mente e entraremos em contacto consigo o mais breve possível.
               </p>
               <ContactForm />
             </div>

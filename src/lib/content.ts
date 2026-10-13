@@ -129,7 +129,7 @@ export interface Job {
   location: string;
   badge?: string;
   confidential?: boolean;
-  tagline: string;
+  tagline?: string;
   overview: string;
   mission: string;
   responsibilities: string[];

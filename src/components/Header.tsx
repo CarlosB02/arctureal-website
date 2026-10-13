@@ -44,17 +44,18 @@ export default function Header({ navigation }: HeaderProps) {
     };
   }, [mobileOpen]);
 
-  // Determine header classes based on route and scroll
+  // Start transparent at top and transition to dark on scroll across all pages
+  const isProjectDetail = pathname.startsWith("/projetos/") && pathname !== "/projetos";
+  const startsTransparent = !isProjectDetail;
+
   let headerClass = styles.header;
-  if (!isHome) {
-    headerClass += ` ${styles.headerLight}`;
-  } else if (isScrolled) {
-    headerClass += ` ${styles.headerHomeScrolled}`;
+  if (startsTransparent && !isScrolled) {
+    headerClass += ` ${styles.headerTop}`;
   } else {
-    headerClass += ` ${styles.headerHomeTop}`;
+    headerClass += ` ${styles.headerScrolled}`;
   }
 
-  const isDarkTheme = isHome; // On homepage it's always dark scrim text (off-white)
+  const isDarkTheme = true; // Off-white luxury typography across all header states
 
   return (
     <header className={headerClass}>

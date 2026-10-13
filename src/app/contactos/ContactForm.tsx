@@ -148,7 +148,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          placeholder="Descreva brevemente a localização, tipologia, fase atual ou objetivo da intervenção..."
+          placeholder="Conte-nos um pouco sobre o seu projeto ou pedido…"
           className={styles.textarea}
         />
       </div>

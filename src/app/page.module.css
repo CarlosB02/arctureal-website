@@ -173,12 +173,29 @@
 
 /* Statement section */
 .statementSection {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
 }
 
+.statementSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/padrao-losangos-1920x1080.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 1920px auto;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .statementInner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3.5rem;

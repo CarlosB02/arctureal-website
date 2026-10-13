@@ -1,16 +1,21 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import type { Job } from "@/lib/content";
 import styles from "./Vagas.module.css";
 
 interface JobApplicationFormProps {
-  jobTitle?: string;
-  jobId?: string;
+  jobs: Job[];
+  selectedJobId: string;
+  onJobChange: (jobId: string) => void;
+  contactEmail?: string;
 }
 
 export default function JobApplicationForm({
-  jobTitle = "Administrativo(a)",
-  jobId = "administrativo",
+  jobs,
+  selectedJobId,
+  onJobChange,
+  contactEmail = "geral@arctureal.com",
 }: JobApplicationFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [formData, setFormData] = useState({
@@ -25,6 +30,12 @@ export default function JobApplicationForm({
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const isSpontaneous = selectedJobId === "futuras-vagas";
+  const activeJob = jobs.find((j) => j.id === selectedJobId);
+  const currentTargetName = isSpontaneous
+    ? "Futuras Vagas (Candidatura Espontânea)"
+    : activeJob?.title || "Vaga Aberta";
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -62,10 +73,9 @@ export default function JobApplicationForm({
     e.preventDefault();
     setStatus("submitting");
 
-    // Simulate sending application
     setTimeout(() => {
       setStatus("success");
-    }, 800);
+    }, 700);
   };
 
   const formatFileSize = (bytes: number) => {
@@ -78,14 +88,18 @@ export default function JobApplicationForm({
     return (
       <div className={styles.successBox} role="status" aria-live="polite">
         <div className={styles.successIconBadge}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <h3 className={styles.successTitle}>Candidatura Submetida com Sucesso</h3>
+        <h3 className={styles.successTitle}>
+          {isSpontaneous ? "Registo Efetuado com Sucesso" : "Candidatura Submetida"}
+        </h3>
         <p className={styles.successText}>
-          Agradecemos o envio dos seus dados para a oportunidade de <strong>{jobTitle}</strong>.
-          A nossa equipa analisará o seu perfil com total discrição e reserva. Caso haja correspondência com as exigências da função, entraremos em contacto para agendamento de entrevista.
+          Agradecemos os seus dados para <strong>{currentTargetName}</strong>. A equipa de gestão do Grupo Arctureal analisará o seu perfil com total reserva e discrição.
+          {isSpontaneous
+            ? " Entraremos em contacto logo que surja uma oportunidade com o seu perfil."
+            : " Havendo correspondência com a função, entraremos em contacto para dar seguimento ao processo."}
         </p>
         <button
           type="button"
@@ -101,10 +115,9 @@ export default function JobApplicationForm({
             setSelectedFile(null);
             setStatus("idle");
           }}
-          className="btn-outline"
-          style={{ width: "fit-content", marginTop: "1rem" }}
+          className={styles.resetButton}
         >
-          Submeter Nova Candidatura
+          Submeter Novo Registo
         </button>
       </div>
     );
@@ -112,30 +125,64 @@ export default function JobApplicationForm({
 
   return (
     <form className={styles.applicationForm} onSubmit={handleSubmit} id="candidatura-form">
-      {/* Vaga de referência */}
-      <div className={styles.formHeaderRef}>
-        <span className={styles.formRefLabel}>A candidatar-se para:</span>
-        <span className={styles.formRefJob}>{jobTitle}</span>
+      {/* Seletor em Dropdown da Finalidade da Candidatura */}
+      <div className={styles.formGroup}>
+        <label htmlFor="app-job-select" className={styles.label}>
+          Finalidade da Candidatura *
+        </label>
+        <div className={styles.selectWrapper}>
+          <select
+            id="app-job-select"
+            name="jobSelect"
+            value={selectedJobId}
+            onChange={(e) => onJobChange(e.target.value)}
+            className={styles.select}
+          >
+            {jobs.map((job) => (
+              <option key={job.id} value={job.id}>
+                {job.title} — {job.department}
+              </option>
+            ))}
+            <option value="futuras-vagas">
+              Futuras Vagas
+            </option>
+          </select>
+          <div className={styles.selectArrow} aria-hidden="true">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
       </div>
 
-      {/* Linha: Nome e Email */}
-      <div className={styles.formRow}>
-        <div className={styles.formGroup}>
-          <label htmlFor="app-name" className={styles.label}>
-            Nome Completo *
-          </label>
-          <input
-            id="app-name"
-            name="name"
-            type="text"
-            required
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            placeholder="Ex.: Maria Santos Silva"
-            className={styles.input}
-          />
-        </div>
+      {/* Nome Completo */}
+      <div className={styles.formGroup}>
+        <label htmlFor="app-name" className={styles.label}>
+          Nome Completo *
+        </label>
+        <input
+          id="app-name"
+          name="name"
+          type="text"
+          required
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          placeholder="Ex.: Teresa Rodrigues"
+          className={styles.input}
+        />
+      </div>
 
+      {/* Linha: Email e Telefone */}
+      <div className={styles.formRow}>
         <div className={styles.formGroup}>
           <label htmlFor="app-email" className={styles.label}>
             Email de Contacto *
@@ -151,10 +198,7 @@ export default function JobApplicationForm({
             className={styles.input}
           />
         </div>
-      </div>
 
-      {/* Linha: Telefone e LinkedIn */}
-      <div className={styles.formRow}>
         <div className={styles.formGroup}>
           <label htmlFor="app-phone" className={styles.label}>
             Contacto Telefónico *
@@ -170,27 +214,28 @@ export default function JobApplicationForm({
             className={styles.input}
           />
         </div>
+      </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="app-linkedin" className={styles.label}>
-            LinkedIn ou Portfólio (Opcional)
-          </label>
-          <input
-            id="app-linkedin"
-            name="linkedin"
-            type="url"
-            value={formData.linkedin}
-            onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
-            placeholder="https://linkedin.com/in/perfil"
-            className={styles.input}
-          />
-        </div>
+      {/* LinkedIn ou Portfólio */}
+      <div className={styles.formGroup}>
+        <label htmlFor="app-linkedin" className={styles.label}>
+          LinkedIn ou Portfólio (Opcional)
+        </label>
+        <input
+          id="app-linkedin"
+          name="linkedin"
+          type="url"
+          value={formData.linkedin}
+          onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
+          placeholder="https://linkedin.com/in/perfil"
+          className={styles.input}
+        />
       </div>
 
       {/* Upload de Currículo / CV */}
       <div className={styles.formGroup}>
         <label className={styles.label}>
-          Currículo / CV (PDF, DOC ou DOCX até 10MB) *
+          Currículo / CV (PDF ou DOCX até 10MB) *
         </label>
 
         {!selectedFile ? (
@@ -219,12 +264,12 @@ export default function JobApplicationForm({
             />
             <div className={styles.dropzoneContent}>
               <svg
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="1.6"
                 className={styles.dropzoneIcon}
               >
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -234,15 +279,15 @@ export default function JobApplicationForm({
                 <line x1="15" y1="15" x2="12" y2="12" />
               </svg>
               <div className={styles.dropzoneText}>
-                <strong>Clique para selecionar o ficheiro</strong> ou arraste o seu CV para aqui
+                <strong>Anexar Currículo</strong> ou arrastar ficheiro para aqui
               </div>
-              <span className={styles.dropzoneHint}>Formatos suportados: PDF, DOCX (Máx. 10MB)</span>
+              <span className={styles.dropzoneHint}>Formatos: PDF, DOCX (Máx. 10MB)</span>
             </div>
           </div>
         ) : (
           <div className={styles.fileSelectedBar}>
             <div className={styles.fileSelectedInfo}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14 2 14 8 20 8" />
               </svg>
@@ -261,55 +306,56 @@ export default function JobApplicationForm({
         )}
       </div>
 
-      {/* Breve Apresentação / Mensagem */}
+      {/* Apresentação / Motivação */}
       <div className={styles.formGroup}>
         <label htmlFor="app-motivation" className={styles.label}>
-          Apresentação Pessoal & Motivação *
+          {isSpontaneous
+            ? "Áreas de Interesse & Breve Apresentação *"
+            : "Apresentação Pessoal & Motivação *"}
         </label>
         <textarea
           id="app-motivation"
           name="motivation"
           required
-          rows={5}
+          rows={4}
           value={formData.motivation}
           onChange={(e) => setFormData({ ...formData, motivation: e.target.value })}
-          placeholder="Conte-nos brevemente o seu percurso, como organiza o seu trabalho em ambientes dinâmicos e por que razão se identifica com esta função..."
+          placeholder={
+            isSpontaneous
+              ? "Indique brevemente o seu percurso, as áreas onde gostaria de colaborar e a sua disponibilidade..."
+              : "Descreva sucintamente o seu percurso e as razões do seu interesse por esta função no grupo..."
+          }
           className={styles.textarea}
         />
       </div>
 
-      {/* Confidencialidade Checkbox */}
-      <div className={styles.checkboxGroup}>
-        <input
-          id="app-confidentiality"
-          type="checkbox"
-          required
-          checked={formData.confidentialityAgreed}
-          onChange={(e) =>
-            setFormData({ ...formData, confidentialityAgreed: e.target.checked })
-          }
-          className={styles.checkbox}
-        />
-        <label htmlFor="app-confidentiality" className={styles.checkboxLabel}>
-          Compreendo o carácter familiar e confidencial da estrutura do grupo e comprometo-me ao total rigor e discrição quanto às informações e processos envolvidos.
-        </label>
-      </div>
-
-      {/* Botão de Submissão */}
+      {/* Botão de Envio */}
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-primary"
-        style={{
-          marginTop: "1rem",
-          backgroundColor: "var(--color-primary)",
-          borderColor: "var(--color-primary)",
-          color: "#FFFFFF",
-          padding: "0.85rem 2rem",
-        }}
+        className={styles.submitBtn}
       >
-        {status === "submitting" ? "A Enviar Candidatura..." : "Submeter Candidatura"}
+        {status === "submitting"
+          ? "A Submeter..."
+          : isSpontaneous
+            ? "Registar para Futuras Vagas"
+            : "Submeter Candidatura"}
       </button>
+
+      {/* Contacto Alternativo por Email */}
+      <div className={styles.directEmailMiniCard}>
+        <span className={styles.directEmailMiniText}>
+          Prefere submeter por email?
+        </span>
+        <a
+          href={`mailto:${contactEmail}?subject=Candidatura%20-%20${encodeURIComponent(
+            currentTargetName
+          )}`}
+          className={styles.directEmailMiniLink}
+        >
+          {contactEmail} &rarr;
+        </a>
+      </div>
     </form>
   );
 }

@@ -77,11 +77,10 @@ export default function GrupoPage() {
 
         <div className="container" style={{ position: "relative", zIndex: 3, width: "100%" }}>
           <div className={`${styles.heroContent} animate-fade-in`}>
-            <span className={styles.heroEyebrow}>{heroData.eyebrow}</span>
             <h1 id="grupo-hero-title" className={styles.heroTitle}>
               {heroData.title}
             </h1>
-            <p className={styles.heroLead}>{heroData.subtitle}</p>
+            <div className={styles.heroDivider} />
           </div>
         </div>
       </section>
@@ -119,11 +118,15 @@ export default function GrupoPage() {
       <section className={styles.companiesSection} aria-labelledby="companies-title">
         <div className="container">
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionEyebrow}>{companiesHeader.eyebrow}</span>
+            {companiesHeader.eyebrow && (
+              <span className={styles.sectionEyebrow}>{companiesHeader.eyebrow}</span>
+            )}
             <h2 id="companies-title" className={styles.sectionTitle}>
               {companiesHeader.title}
             </h2>
-            <p className={styles.sectionSubtitle}>{companiesHeader.subtitle}</p>
+            {companiesHeader.subtitle && (
+              <p className={styles.sectionSubtitle}>{companiesHeader.subtitle}</p>
+            )}
           </div>
 
           <div className={styles.companiesGrid}>
@@ -161,7 +164,9 @@ export default function GrupoPage() {
                     <h3 id={`company-title-${company.id}`} className={styles.cardTitle}>
                       {company.name}
                     </h3>
-                    <span className={styles.cardTagline}>{company.tagline}</span>
+                    {company.tagline && (
+                      <span className={styles.cardTagline}>{company.tagline}</span>
+                    )}
                   </div>
 
                   <p className={styles.cardDesc}>{company.description}</p>
@@ -178,15 +183,17 @@ export default function GrupoPage() {
                     </div>
                   )}
 
-                  {/* Action Link */}
-                  <div className={styles.cardFooter}>
-                    <Link
-                      href={company.link || "/projetos"}
-                      className={styles.cardLink}
-                    >
-                      {company.linkText || "Conhecer Projetos"} &rarr;
-                    </Link>
-                  </div>
+                  {/* Action Link (apenas se existir link no JSON) */}
+                  {company.link && (
+                    <div className={styles.cardFooter}>
+                      <Link
+                        href={company.link}
+                        className={styles.cardLink}
+                      >
+                        {company.linkText || "Conhecer Projetos"} &rarr;
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}

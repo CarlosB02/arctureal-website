@@ -5,23 +5,29 @@
   "hero": {
     "eyebrow": "Quem Somos & O Coletivo",
     "title": "O Ecossistema Arctureal",
-    "subtitle": "Uma marca-mãe de referência que alia a promoção imobiliária de excelência e a estratégia territorial à mestria de ateliers especializados.",
     "image": "/images/areas/visao-missao.jpg"
   },
   "intro": {
-    "eyebrow": "Quem Somos & Modelo de Sinergia",
-    "title": "Arctureal Properties · Rigor, Sustentabilidade e Visão Integrada",
-    "text": "Nascida em 2020, a Arctureal Properties consolidou-se como uma referência na promoção e desenvolvimento de projetos residenciais e hoteleiros nas zonas de excelência de Lisboa, Porto e Faro. A ARCTUREAL funciona como a estrutura agregadora e estratégica de várias empresas focadas na cadeia de valor do ambiente construído — unindo experiência de mercado e visão de investimento à autonomia criativa e técnica profunda de cada atelier, garantindo um único interlocutor de confiança do primeiro traço à entrega de chave.",
+    "eyebrow": "Quem Somos",
+    "title": "Um grupo, um só interlocutor",
+    "text": "A ARCTUREAL reúne várias empresas ligadas à construção, do investimento ao projeto e à obra. Cada uma mantém a sua autonomia técnica e criativa, e todas trabalham em conjunto para que o cliente tenha um único interlocutor, do primeiro traço à entrega da chave.",
     "highlights": [
-      { "label": "Fundação Arctureal Properties", "value": "2020" },
-      { "label": "Zonas de Excelência", "value": "Lisboa · Porto · Faro" },
-      { "label": "Foco de Atuação", "value": "Residencial & Hotelaria" },
-      { "label": "Coordenação Integrada", "value": "1 Só Interlocutor" }
+      {
+        "label": "Anos de Experiência",
+        "value": "+20"
+      },
+      {
+        "label": "Zona de Atuação",
+        "value": "Internacional"
+      },
+      {
+        "label": "Foco de Investimento",
+        "value": "Imobiliário & Hotelaria"
+      }
     ]
   },
   "companiesSection": {
-    "eyebrow": "Entidades Integradas",
-    "title": "Empresas Especializadas",
+    "title": "Empresas Parceiras",
     "subtitle": "Equipas dedicadas com mestria comprovada nas suas respetivas áreas de atuação."
   },
   "companies": [
@@ -29,71 +35,39 @@
       "id": "arctureal-studio",
       "index": "01",
       "name": "Arctureal Studio",
-      "badge": "Arquitetura",
-      "tagline": "Arquitetura de Autor & Edifícios Singulares",
-      "description": "Núcleo de conceção focado em habitação contemporânea, edifícios singulares e intervenções de autor com forte rigor formal.",
-      "image": "/images/areas/imobiliario.jpg",
-      "kpis": [
-        { "label": "Projetos", "value": "+85" },
-        { "label": "Distinções", "value": "6 Prémios" },
-        { "label": "Foco", "value": "Residencial & Corporativo" }
-      ],
-      "link": "/projetos",
-      "linkText": "Ver Obras do Studio"
+      "badge": "Imobiliário",
+      "description": "Desenvolvimento de projetos residenciais, do terreno à entrega da chave.",
+      "image": "/images/areas/imobiliario.jpg"
     },
     {
       "id": "arctureal-living",
       "index": "02",
-      "name": "Arctureal Living",
-      "badge": "Interiores",
-      "tagline": "Interiores de Autor & Marcenaria à Medida",
-      "description": "Dedicado à dimensão táctil do espaço, desenho de mobiliário sob medida e seleção de materiais naturais nobres.",
-      "image": "/images/areas/hotelaria.jpg",
-      "kpis": [
-        { "label": "Interiores", "value": "+120" },
-        { "label": "Mobiliário", "value": "Coleção Própria" },
-        { "label": "Foco", "value": "Habitação & Hotelaria" }
-      ],
-      "link": "/projetos",
-      "linkText": "Ver Espaços Living"
+      "name": "Arctureal Turism",
+      "badge": "Hotelaria",
+      "description": "Criação e gestão de unidades hoteleiras com identidade própria, pensadas para durar e para quem as visita.",
+      "image": "/images/areas/hotelaria.jpg"
     },
     {
       "id": "arctureal-urban",
       "index": "03",
-      "name": "Arctureal Urban",
-      "badge": "Urbanismo",
-      "tagline": "Masterplanning & Regeneração Territorial",
-      "description": "Abordagem em macroescala focada no ordenamento do território, loteamentos sustentáveis e valorização da paisagem.",
-      "image": "/images/areas/investimentos.jpg",
-      "kpis": [
-        { "label": "Masterplans", "value": "+30" },
-        { "label": "Território", "value": "Regeneração Ativa" },
-        { "label": "Foco", "value": "Urbano & Litoral" }
-      ],
-      "link": "/projetos",
-      "linkText": "Ver Planos Urbanos"
+      "name": "Arctureal Invest",
+      "badge": "Investimentos",
+      "description": "Oportunidades de investimento e copromoção imobiliária para investidores privados, family offices e instituições.",
+      "image": "/images/areas/investimentos.jpg"
     },
     {
       "id": "arctureal-engineering",
       "index": "04",
-      "name": "Arctureal Engineering",
-      "badge": "Engenharia",
-      "tagline": "Engenharia Integrada & Gestão de Obra",
-      "description": "Braço técnico focado em estruturas eficientes, certificações ambientais e acompanhamento rigoroso de estaleiro.",
-      "image": "/images/areas/gestao-servicos.jpg",
-      "kpis": [
-        { "label": "Coordenação", "value": "+150 Obras" },
-        { "label": "Sustentabilidade", "value": "BREEAM & LEED" },
-        { "label": "Foco", "value": "Estruturas & Gestão" }
-      ],
-      "link": "/contactos",
-      "linkText": "Consultar Engenharia"
+      "name": "Arctureal Internacional",
+      "badge": "Internacionalização",
+      "description": "Expansão dos projetos do grupo para além de Portugal, com parceiros locais e a mesma exigência em cada mercado.",
+      "image": "/images/areas/internacional-hub.jpg"
     }
   ],
   "cta": {
     "title": "Tem um projeto em mente?",
     "description": "Articulamos a equipa ideal para acompanhar o seu projeto do primeiro esboço à entrega final.",
-    "buttonText": "Falar com o Coletivo",
+    "buttonText": "Entrar em contacto",
     "buttonLink": "/contactos"
   }
 }
