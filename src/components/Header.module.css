@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 100;
   width: 100%;
   transition: background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
 }
@@ -20,6 +20,14 @@
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Solid background when mobile menu is open */
+.headerMobileOpen {
+  background-color: #1A1918 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .inner {
@@ -186,22 +194,29 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-dark);
-  padding: 2.5rem var(--container-pad);
+  width: 100%;
+  height: calc(100vh - 5rem);
+  height: calc(100dvh - 5rem);
+  background-color: #1A1918;
+  padding: 2.25rem var(--container-pad) 2.5rem var(--container-pad);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  transform: translateY(-100%);
+  transform: translateY(-8px);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
-  z-index: 49;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 99;
 }
 
 .mobileDrawerOpen {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -213,21 +228,51 @@
 
 .mobileNavLink {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   color: #FAF8F5;
   transition: color var(--transition-smooth);
 }
 
-.mobileNavLink:hover {
+.mobileNavLink:hover,
+.mobileNavLinkActive {
   color: var(--color-primary);
 }
 
 .mobileContactInfo {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
+  padding-top: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+}
+
+.mobileActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-smooth);
+  align-self: flex-start;
+}
+
+.mobileActionBtn:hover,
+.mobileActionBtn:active {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.mobileContactMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .mobileContactText {
