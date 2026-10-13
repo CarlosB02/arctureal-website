@@ -720,13 +720,11 @@
 /* =========================================================================
    CAROUSEL WRAPPERS (Mobile)
    ========================================================================= */
-.cycleCarouselWrapper,
-.projectsCarouselWrapper {
+.cycleCarouselWrapper {
   display: none;
 }
 
-.cycleCarouselTrack,
-.projectsCarouselTrack {
+.cycleCarouselTrack {
   display: flex;
   gap: 1.25rem;
   overflow-x: auto;
@@ -739,8 +737,7 @@
   outline: none;
 }
 
-.cycleCarouselTrack::-webkit-scrollbar,
-.projectsCarouselTrack::-webkit-scrollbar {
+.cycleCarouselTrack::-webkit-scrollbar {
   display: none;
 }
 
@@ -763,31 +760,6 @@
 .cycleCarouselSlideActive {
   border-color: var(--color-primary);
   box-shadow: 0 14px 34px -8px rgba(192, 132, 64, 0.2);
-}
-
-.projectCarouselSlide {
-  position: relative;
-  flex: 0 0 min(86vw, 420px);
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 2px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow:
-    0 18px 42px -10px rgba(0, 0, 0, 0.4),
-    0 6px 18px -4px rgba(0, 0, 0, 0.22);
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  user-select: none;
-}
-
-.projectCarouselSlideActive {
-  border-color: var(--color-primary);
-  box-shadow:
-    0 24px 50px -10px rgba(0, 0, 0, 0.5),
-    0 0 16px rgba(192, 132, 64, 0.3);
 }
 
 /* Shared Carousel Controls */
@@ -881,42 +853,6 @@
   border-color: var(--color-border-light);
 }
 
-/* Specific styling for controls on the dark sticky section in Arquivo de Obras */
-.projectsCarouselWrapper .paginationBar {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-.projectsCarouselWrapper .paginationBarActive {
-  background-color: var(--color-primary);
-}
-
-.projectsCarouselWrapper .counterSep {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.projectsCarouselWrapper .counterTotal {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.projectsCarouselWrapper .arrowButton {
-  background-color: rgba(30, 28, 26, 0.85);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  backdrop-filter: blur(8px);
-}
-
-.projectsCarouselWrapper .arrowButton:not(:disabled):hover,
-.projectsCarouselWrapper .arrowButton:not(:disabled):active {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: rgba(192, 132, 64, 0.15);
-}
-
-.projectsCarouselWrapper .arrowButton:disabled {
-  opacity: 0.25;
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
 @media (max-width: 1024px) {
   .investorGrid {
     grid-template-columns: 1fr;
@@ -933,14 +869,7 @@
     margin-right: calc(-1 * var(--container-pad));
   }
   .projectsGrid {
-    display: none;
-  }
-  .projectsCarouselWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-left: calc(-1 * var(--container-pad));
-    margin-right: calc(-1 * var(--container-pad));
+    grid-template-columns: 1fr;
   }
   .detailGrid {
     grid-template-columns: 1fr;
