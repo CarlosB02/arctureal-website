@@ -34,7 +34,9 @@
   margin-top: 1rem;
 }
 
-/* 5 Expandable Architectural Louvers / Panes */
+/* =========================================================================
+   DESKTOP: 5 Expandable Architectural Louvers / Panes
+   ========================================================================= */
 .panesContainer {
   display: flex;
   height: 580px;
@@ -123,24 +125,10 @@
   font-weight: 600;
   background: rgba(24, 22, 20, 0.6);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 0.25rem 0.65rem;
   border: 1px solid rgba(192, 132, 64, 0.35);
   border-radius: 2px;
-}
-
-.paneTag {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(250, 248, 245, 0.7);
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: all 0.3s ease;
-}
-
-.paneActive .paneTag {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .paneBottom {
@@ -187,23 +175,6 @@
   margin: 0;
 }
 
-.paneKeywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.paneBadge {
-  font-size: 0.675rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  background-color: rgba(192, 132, 64, 0.15);
-  border: 1px solid rgba(192, 132, 64, 0.3);
-  padding: 0.2rem 0.55rem;
-  border-radius: 2px;
-}
-
 .paneAction {
   display: inline-flex;
   align-items: center;
@@ -222,32 +193,295 @@
   color: #FFFFFF;
 }
 
-/* Mobile & Tablet view */
+/* =========================================================================
+   MOBILE: Architectural Carousel
+   ========================================================================= */
+.carouselWrapper {
+  display: none;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem var(--container-pad) 1.25rem var(--container-pad);
+  outline: none;
+}
+
+.carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselSlide {
+  position: relative;
+  flex: 0 0 min(84vw, 380px);
+  height: 470px;
+  max-height: 68vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px -10px rgba(48, 45, 42, 0.15);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  user-select: none;
+}
+
+.carouselSlideActive {
+  border-color: var(--color-primary);
+  box-shadow: 0 14px 34px -8px rgba(192, 132, 64, 0.2);
+}
+
+.slideImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carouselSlideActive .slideImage {
+  transform: scale(1.04);
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 22, 20, 0.45) 0%,
+    rgba(24, 22, 20, 0.2) 30%,
+    rgba(24, 22, 20, 0.84) 68%,
+    rgba(24, 22, 20, 0.98) 100%
+  );
+  z-index: 1;
+}
+
+.slideContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+
+.slideTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slideIndex {
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  font-weight: 600;
+  background: rgba(24, 22, 20, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(192, 132, 64, 0.35);
+  border-radius: 2px;
+}
+
+.slideBadge {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(250, 248, 245, 0.6);
+  font-weight: 500;
+}
+
+.slideBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.slideTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 4.5vw, 2.15rem);
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.slideDivider {
+  width: 32px;
+  height: 1px;
+  background-color: var(--color-primary);
+  opacity: 0.7;
+}
+
+.slideDesc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(250, 248, 245, 0.88);
+  margin: 0;
+}
+
+.slideAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.35rem;
+  transition: gap var(--transition-smooth), color var(--transition-smooth);
+  align-self: flex-start;
+}
+
+.slideAction:hover,
+.slideAction:active {
+  gap: 0.85rem;
+  color: #FFFFFF;
+}
+
+.slideActionArrow {
+  font-size: 1rem;
+  transition: transform var(--transition-smooth);
+}
+
+.slideAction:hover .slideActionArrow,
+.slideAction:active .slideActionArrow {
+  transform: translateX(4px);
+}
+
+/* Carousel Controls & Pagination */
+.carouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  padding-top: 0.25rem;
+  gap: 1rem;
+}
+
+.carouselCounter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.counterCurrent {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.counterSep {
+  color: var(--color-text-light);
+  opacity: 0.6;
+}
+
+.counterTotal {
+  color: var(--color-text-muted);
+}
+
+.carouselPagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paginationBar {
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  padding: 0;
+}
+
+.paginationBarActive {
+  width: 28px;
+  background-color: var(--color-primary);
+}
+
+.carouselArrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-dark);
+  transition: all var(--transition-smooth);
+}
+
+.arrowButton:not(:disabled):hover,
+.arrowButton:not(:disabled):active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+}
+
+.arrowButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--color-border-light);
+}
+
+/* =========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================= */
 @media (max-width: 1024px) {
+  .header {
+    margin-bottom: 2.25rem;
+  }
+
   .panesContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    height: auto;
-    gap: 1.5rem;
+    display: none;
   }
 
-  .pane {
-    height: 380px;
-    flex: none;
+  .carouselWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-left: calc(-1 * var(--container-pad));
+    margin-right: calc(-1 * var(--container-pad));
+  }
+}
+
+@media (max-width: 640px) {
+  .carouselSlide {
+    height: 450px;
+    max-height: 65vh;
   }
 
-  .paneActive {
-    flex: none;
+  .slideContent {
+    padding: 1.5rem 1.25rem;
   }
 
-  .paneDetails {
-    opacity: 1;
-    max-height: none;
-    transform: none;
-  }
-
-  .paneTag {
-    opacity: 1;
-    transform: none;
+  .arrowButton {
+    width: 38px;
+    height: 38px;
   }
 }

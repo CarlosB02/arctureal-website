@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getAllProjects } from "@/lib/content";
 import ProjectsList from "./ProjectsList";
+import InvestmentCycle from "./InvestmentCycle";
 import { BreadcrumbsJsonLd } from "@/components/JsonLd";
 import styles from "./Projects.module.css";
 
@@ -37,7 +38,7 @@ export default function ProjectsPage() {
       <section className={styles.hero} aria-labelledby="projetos-title">
         <div className={styles.heroBackground}>
           <Image
-            src="/images/hero-architecture.jpg"
+            src="/images/hero-architecture.webp"
             alt="Projetos e obras de arquitetura de autor do Grupo Arctureal"
             fill
             priority
@@ -98,16 +99,12 @@ export default function ProjectsPage() {
 
             <div className={styles.investorImageWrapper}>
               <Image
-                src="/images/areas/investimentos.jpg"
+                src="/images/areas/investimentos.webp"
                 alt="Estruturação de investimentos imobiliários e desenvolvimento de ativos Arctureal"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={styles.investorImage}
               />
-              <div className={styles.investorImageBadge}>
-                <span className={styles.badgeValue}>Turnkey &amp; Co-Investimento</span>
-                <span className={styles.badgeLabel}>Modelo Estruturado de Parceria</span>
-              </div>
             </div>
           </div>
         </div>
@@ -126,67 +123,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className={styles.cycleGrid}>
-            <div className={styles.cycleCard}>
-              <div className={styles.cycleCardImageBox}>
-                <Image
-                  src="/images/areas/gestao-servicos.jpg"
-                  alt="Originação e viabilidade de ativos"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={styles.cycleCardImage}
-                />
-                <span className={styles.cycleCardIndex}>01</span>
-              </div>
-              <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Análise e viabilidade</h3>
-                <p className={styles.cycleCardDesc}>
-                  Identificamos e analisamos oportunidades de investimento, avaliando o potencial, os riscos e a viabilidade de cada uma.
-                </p>
-                <span className={styles.cycleCardTag}>Análise</span>
-              </div>
-            </div>
-
-            <div className={styles.cycleCard}>
-              <div className={styles.cycleCardImageBox}>
-                <Image
-                  src="/images/areas/imobiliario.jpg"
-                  alt="Conceção arquitetónica e licenciamento"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={styles.cycleCardImage}
-                />
-                <span className={styles.cycleCardIndex}>02</span>
-              </div>
-              <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Estruturação</h3>
-                <p className={styles.cycleCardDesc}>
-                  Definimos o plano de negócio, o modelo de investimento e os parceiros certos para cada projeto.
-                </p>
-                <span className={styles.cycleCardTag}>Estratégia</span>
-              </div>
-            </div>
-
-            <div className={styles.cycleCard}>
-              <div className={styles.cycleCardImageBox}>
-                <Image
-                  src="/images/areas/hotelaria.jpg"
-                  alt="Execução, entrega e desinvestimento"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={styles.cycleCardImage}
-                />
-                <span className={styles.cycleCardIndex}>03</span>
-              </div>
-              <div className={styles.cycleCardBody}>
-                <h3 className={styles.cycleCardTitle}>Valorização e retorno</h3>
-                <p className={styles.cycleCardDesc}>
-                  Acompanhamos o ativo até ao fim, seja por venda, arrendamento ou exploração, com informação regular ao investidor.
-                </p>
-                <span className={styles.cycleCardTag}>Retorno</span>
-              </div>
-            </div>
-          </div>
+          <InvestmentCycle />
         </div>
       </section>
 

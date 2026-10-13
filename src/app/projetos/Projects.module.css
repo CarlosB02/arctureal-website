@@ -717,29 +717,236 @@
   border-radius: 2px;
 }
 
+/* =========================================================================
+   CAROUSEL WRAPPERS (Mobile)
+   ========================================================================= */
+.cycleCarouselWrapper,
+.projectsCarouselWrapper {
+  display: none;
+}
+
+.cycleCarouselTrack,
+.projectsCarouselTrack {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem var(--container-pad) 1.25rem var(--container-pad);
+  outline: none;
+}
+
+.cycleCarouselTrack::-webkit-scrollbar,
+.projectsCarouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.cycleCarouselSlide {
+  position: relative;
+  flex: 0 0 min(84vw, 380px);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px -6px rgba(48, 45, 42, 0.08);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+}
+
+.cycleCarouselSlideActive {
+  border-color: var(--color-primary);
+  box-shadow: 0 14px 34px -8px rgba(192, 132, 64, 0.2);
+}
+
+.projectCarouselSlide {
+  position: relative;
+  flex: 0 0 min(86vw, 420px);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 18px 42px -10px rgba(0, 0, 0, 0.4),
+    0 6px 18px -4px rgba(0, 0, 0, 0.22);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+}
+
+.projectCarouselSlideActive {
+  border-color: var(--color-primary);
+  box-shadow:
+    0 24px 50px -10px rgba(0, 0, 0, 0.5),
+    0 0 16px rgba(192, 132, 64, 0.3);
+}
+
+/* Shared Carousel Controls */
+.carouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  padding-top: 0.25rem;
+  gap: 1rem;
+}
+
+.carouselCounter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.counterCurrent {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.counterSep {
+  color: var(--color-text-light);
+  opacity: 0.6;
+}
+
+.counterTotal {
+  color: var(--color-text-muted);
+}
+
+.carouselPagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 50%;
+  overflow-x: hidden;
+}
+
+.paginationBar {
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.paginationBarActive {
+  width: 26px;
+  background-color: var(--color-primary);
+}
+
+.carouselArrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-dark);
+  transition: all var(--transition-smooth);
+}
+
+.arrowButton:not(:disabled):hover,
+.arrowButton:not(:disabled):active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+}
+
+.arrowButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--color-border-light);
+}
+
+/* Specific styling for controls on the dark sticky section in Arquivo de Obras */
+.projectsCarouselWrapper .paginationBar {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.projectsCarouselWrapper .paginationBarActive {
+  background-color: var(--color-primary);
+}
+
+.projectsCarouselWrapper .counterSep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.projectsCarouselWrapper .counterTotal {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.projectsCarouselWrapper .arrowButton {
+  background-color: rgba(30, 28, 26, 0.85);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  backdrop-filter: blur(8px);
+}
+
+.projectsCarouselWrapper .arrowButton:not(:disabled):hover,
+.projectsCarouselWrapper .arrowButton:not(:disabled):active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: rgba(192, 132, 64, 0.15);
+}
+
+.projectsCarouselWrapper .arrowButton:disabled {
+  opacity: 0.25;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 1024px) {
   .investorGrid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
   .cycleGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    display: none;
+  }
+  .cycleCarouselWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-left: calc(-1 * var(--container-pad));
+    margin-right: calc(-1 * var(--container-pad));
   }
   .projectsGrid {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+  .projectsCarouselWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: calc(-1 * var(--container-pad));
+    margin-right: calc(-1 * var(--container-pad));
   }
   .detailGrid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
   .galleryGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .cycleGrid {
     grid-template-columns: 1fr;
   }
 }
@@ -756,5 +963,10 @@
     width: 36px;
     margin-top: 1rem;
   }
+  .arrowButton {
+    width: 38px;
+    height: 38px;
+  }
 }
+
 

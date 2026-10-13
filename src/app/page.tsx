@@ -82,11 +82,8 @@ export default function HomePage() {
       <section className={styles.metricsRibbonSection} aria-label="Métricas de Escala e Dimensão do Coletivo">
         <div className="container">
           <div className={styles.metricsRibbonInner}>
-            {/* 6 / Anos de Experiência */}
+            {/* +20 / Anos de Experiência */}
             <div className={styles.metricBlock}>
-              <div className={styles.metricTopRow}>
-                <span className={styles.metricContext}>Projeção</span>
-              </div>
               <div className={styles.metricValueWrapper}>
                 <span className={styles.metricValue}>+20</span>
               </div>
@@ -95,11 +92,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Presença / 5 / Áreas */}
+            {/* 5 / Áreas */}
             <div className={styles.metricBlock}>
-              <div className={styles.metricTopRow}>
-                <span className={styles.metricContext}>Presença</span>
-              </div>
               <div className={styles.metricValueWrapper}>
                 <span className={styles.metricValue}>5</span>
               </div>
@@ -110,9 +104,6 @@ export default function HomePage() {
 
             {/* 3 / Geografias */}
             <div className={styles.metricBlock}>
-              <div className={styles.metricTopRow}>
-                <span className={styles.metricContext}>Território</span>
-              </div>
               <div className={styles.metricValueWrapper}>
                 <span className={styles.metricValue}>3</span>
               </div>
@@ -123,14 +114,11 @@ export default function HomePage() {
 
             {/* 1 / Interlocutor */}
             <div className={styles.metricBlock}>
-              <div className={styles.metricTopRow}>
-                <span className={styles.metricContext}>Coletivo</span>
-              </div>
               <div className={styles.metricValueWrapper}>
                 <span className={styles.metricValue}>1</span>
               </div>
               <div className={styles.metricBottomRow}>
-                <span className={styles.metricLabel}>INTERLOCUTOR</span>
+                <span className={styles.metricLabel}>Interlocutor</span>
               </div>
             </div>
           </div>

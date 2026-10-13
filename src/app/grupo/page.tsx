@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getGroupData } from "@/lib/content";
+import GrupoAreas from "./GrupoAreas";
 import { BreadcrumbsJsonLd } from "@/components/JsonLd";
 import styles from "./Grupo.module.css";
 
@@ -131,64 +132,7 @@ export default function GrupoPage() {
             )}
           </div>
 
-          <div className={styles.areasGrid}>
-            {areasList.map((area, index) => {
-              const isWide = index === 4; // Area 05 (Internacional)
-              return (
-                <article
-                  key={area.id}
-                  id={area.id}
-                  className={`${styles.areaCard} ${isWide ? styles.areaCardWide : ""}`}
-                  aria-labelledby={`area-title-${area.id}`}
-                >
-                  {/* Image Banner */}
-                  <div className={styles.cardImageBox}>
-                    <Image
-                      src={area.image}
-                      alt={`Fotografia representativa da área ${area.title}`}
-                      fill
-                      sizes={isWide ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
-                      className={styles.cardImage}
-                      priority={index < 2}
-                    />
-                    <div className={styles.cardImageScrim} />
-                    <span className={styles.cardIndex}>{area.index}</span>
-                  </div>
-
-                  {/* Card Body */}
-                  <div className={styles.cardBody}>
-                    <div className={styles.cardHeader}>
-                      <h3 id={`area-title-${area.id}`} className={styles.cardTitle}>
-                        {area.title}
-                      </h3>
-                      {area.tagline && (
-                        <p className={styles.cardTagline}>{area.tagline}</p>
-                      )}
-                    </div>
-
-                    <p className={styles.cardDesc}>{area.description}</p>
-
-                    {area.highlights && area.highlights.length > 0 && (
-                      <ul className={styles.highlightsList}>
-                        {area.highlights.map((point, pIdx) => (
-                          <li key={pIdx} className={styles.highlightBullet}>
-                            <span className={styles.bulletDot} />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className={styles.cardFooter}>
-                      <Link href="/contactos" className={styles.cardAction}>
-                        Consultar para {area.title} &rarr;
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+          <GrupoAreas areasList={areasList} />
         </div>
       </section>
 
