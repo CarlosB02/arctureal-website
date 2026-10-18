@@ -212,7 +212,6 @@
   /* Outline tipográfico suave com gradiente sutil */
   color: transparent;
   -webkit-text-stroke: 1px rgba(250, 248, 245, 0.14);
-  text-stroke: 1px rgba(250, 248, 245, 0.14);
 
   background: linear-gradient(
     180deg,
@@ -228,7 +227,6 @@
 
 .monolithContainer:hover .monolithText {
   -webkit-text-stroke-color: rgba(192, 132, 64, 0.45);
-  text-stroke-color: rgba(192, 132, 64, 0.45);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.32) 0%,

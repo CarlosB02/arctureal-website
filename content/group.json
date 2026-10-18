@@ -1,16 +1,16 @@
 {
   "heading": "O Ecossistema Arctureal",
-  "subheading": "Estrutura integrada de arquitetura e investimento com sede em Lisboa. Desenvolvimento imobiliário, hotelaria, gestão e internacionalização com um só interlocutor do início ao fim.",
-  "philosophy": "A ARCTUREAL funciona como uma estrutura multidisciplinar e integrada, abrangendo toda a cadeia de valor do ambiente construído. Articulamos conceção arquitetónica, investimento e execução técnica para assegurar consistência, rigor e qualidade sem intermediários.",
+  "subheading": "Estrutura empresarial integrada com sede em Lisboa. Atuação consolidada em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos, com um só interlocutor do início ao fim.",
+  "philosophy": "A ARCTUREAL opera como uma estrutura integrada e multissetorial. Articulamos Hotelaria, Gestão de Património, Promoção, Construção e Investimentos para assegurar visão estratégica, rigor executivo e valorização duradoura de cada ativo.",
   "hero": {
-    "eyebrow": "Quem Somos & O Coletivo",
+    "eyebrow": "Quem Somos & O Grupo",
     "title": "O Ecossistema Arctureal",
     "image": "/images/areas/visao-missao.webp"
   },
   "intro": {
     "eyebrow": "Quem Somos",
     "title": "Um coletivo, um só interlocutor",
-    "text": "A ARCTUREAL atua transversalmente no setor do ambiente construído, desde a estratégia de investimento e conceção arquitetónica até à fiscalização e entrega final da obra. Asseguramos uma metodologia coesa onde cada área de atuação colabora em total sinergia, garantindo ao cliente um único interlocutor de referência.",
+    "text": "A ARCTUREAL reúne um conjunto de empresas com atuação em hotelaria, gestão de património, promoção imobiliária, construção e investimentos. Asseguramos uma metodologia coesa, em que cada área colabora em total sinergia, garantindo ao cliente um único interlocutor de referência.",
     "highlights": [
       {
         "label": "Anos de Experiência",
@@ -18,89 +18,76 @@
       },
       {
         "label": "Zona de Atuação",
-        "value": "Internacional"
+        "value": "Nacional"
       },
       {
         "label": "Foco de Atuação",
-        "value": "5 Áreas Integradas"
+        "value": "4 Áreas Integradas"
       }
     ]
   },
   "areasSection": {
     "eyebrow": "Áreas de Atuação",
     "title": "Especialização Integrada",
-    "subtitle": "Uma abordagem transversal que articula conceção arquitetónica, estratégia de investimento e capacidade de execução técnica em cinco pilares determinantes."
+    "subtitle": "Uma abordagem multissetorial e equilibrada que articula Hotelaria, Gestão de Património, Promoção e Construção em quatro pilares determinantes."
   },
   "areas": [
     {
-      "id": "imobiliario",
-      "index": "01",
-      "title": "Imobiliário",
-      "tagline": "Desenvolvimento residencial",
-      "description": "Desenvolvemos projetos residenciais do estudo inicial à entrega da chave, para habitação própria ou investimento. Damos prioridade a bons materiais, ao conforto e a uma arquitetura que dure.",
-      "image": "/images/areas/imobiliario.webp",
-      "highlights": [
-        "Desenvolvimento de raiz",
-        "Materiais naturais e duradouros",
-        "Eficiência energética"
-      ]
-    },
-    {
       "id": "hotelaria",
-      "index": "02",
+      "index": "01",
       "title": "Hotelaria",
-      "tagline": "Hotéis, turismo rural, resorts & hospitalidade",
-      "description": "Criamos e reabilitamos unidades hoteleiras integradas na paisagem e no património à sua volta. Arquitetura e interiores pensados em conjunto, para quem visita e para quem investe.",
+      "tagline": "Hotéis boutique de charme",
+      "description": "A nossa atividade hoteleira centra-se em hotéis boutique de charme: unidades com identidade própria, atenção ao detalhe e um serviço personalizado, pensadas para quem visita e para quem investe.",
       "image": "/images/areas/hotelaria.webp",
       "highlights": [
-        "Hotéis boutique urbanos",
-        "Turismo rural e enoturismo",
-        "Paisagismo e bem-estar"
+        "Hotéis boutique de charme",
+        "Experiência de hóspede personalizada",
+        "Localizações com identidade"
       ]
     },
     {
-      "id": "investimentos",
-      "index": "03",
-      "title": "Investimentos",
-      "tagline": "Estruturação de ativos, viabilidade & copromoção imobiliária",
-      "description": "Estruturamos oportunidades de investimento imobiliário para investidores privados, family offices e instituições. Cada projeto começa com um plano de negócio claro e uma análise de riscos feita antes de investir.",
-      "image": "/images/areas/investimentos.webp",
-      "highlights": [
-        "Copromoção e capital estruturado",
-        "Estudos de viabilidade",
-        "Previsibilidade de retorno e margem"
-      ]
-    },
-    {
-      "id": "gestao-servicos",
-      "index": "04",
-      "title": "Gestão e Serviços",
-      "tagline": "Gestão de projetos, imóveis e serviços de apoio",
-      "description": "Damos apoio técnico e administrativo a projetos e imóveis, do licenciamento à gestão do dia a dia. Cuidamos dos processos, dos prazos e dos custos, para que cada ativo funcione bem e mantenha o seu valor.",
+      "id": "gestao-patrimonio",
+      "index": "02",
+      "title": "Gestão de Património",
+      "tagline": "Salvaguarda, valorização & administração de ativos",
+      "description": "Gestão integrada de carteiras imobiliárias e patrimoniais, assegurando a conservação dos ativos, a sua otimização operacional e a geração contínua de rendimento com rigor técnico e administrativo.",
       "image": "/images/areas/gestao-servicos.webp",
       "highlights": [
-        "Licenciamentos e processos administrativos",
-        "Gestão de projetos e de imóveis",
-        "Otimização de prazos e orçamentos"
+        "Gestão operacional e administrativa",
+        "Conservação e preservação de valor",
+        "Otimização de rendibilidade e ocupação"
       ]
     },
     {
-      "id": "internacional",
-      "index": "05",
-      "title": "Internacional",
-      "tagline": "Projeção global & alianças estratégicas",
-      "description": "Levamos a forma de construir da Arctureal a outros mercados, com parceiros locais no estrangeiro. Adaptamos cada projeto às regras locais, sem perder a identidade do grupo.",
+      "id": "promocao",
+      "index": "03",
+      "title": "Promoção",
+      "tagline": "Conceção, planeamento & projetos de referência",
+      "description": "Promoção de projetos estruturantes, desde o estudo de viabilidade e licenciamento até ao produto final. Rigor conceptual e exigência construtiva orientados para a criação de valor sustentável.",
+      "image": "/images/areas/imobiliario.webp",
+      "highlights": [
+        "Desenvolvimento e planeamento integral",
+        "Soluções arquitetónicas duradouras",
+        "Critérios rigorosos de sustentabilidade"
+      ]
+    },
+    {
+      "id": "construcao",
+      "index": "04",
+      "title": "Construção",
+      "tagline": "Rigor técnico, execução & cumprimento de prazos",
+      "description": "Capacidade executiva e fiscalização técnica minuciosa em obra. Controlo estrito de custos, cumprimento rigoroso de prazos e seleção de materiais nobres para obras com elevados padrões de exigência.",
       "image": "/images/areas/internacional-hub.webp",
       "highlights": [
-        "Mercados europeus e internacionais",
-        "Parcerias com agentes locais",
-        "Rigor normativo e padrões internacionais"
+        "Execução e coordenação de obra",
+        "Controlo minucioso de custos e prazos",
+        "Materiais nobres e garantia de qualidade"
       ]
     }
   ],
   "cta": {
     "title": "Tem um projeto em mente?",
-    "description": "Articulamos a equipa ideal para acompanhar o seu projeto do primeiro esboço à entrega final.",
+    "description": "Articulamos a equipa ideal para acompanhar o seu projeto em qualquer uma das áreas de atuação do grupo.",
     "buttonText": "Entrar em contacto",
     "buttonLink": "/contactos"
   }

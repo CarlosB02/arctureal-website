@@ -9,7 +9,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    interest: "Arquitetura & Conceção (Arctureal Studio)",
+    interest: "Hotelaria",
     message: "",
   });
 
@@ -38,7 +38,7 @@ export default function ContactForm() {
               name: "",
               email: "",
               phone: "",
-              interest: "Imobiliário",
+              interest: "Hotelaria",
               message: "",
             });
             setStatus("idle");
@@ -115,20 +115,20 @@ export default function ContactForm() {
             onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
             className={styles.select}
           >
-            <option value="Imobiliário">
-              Imobiliário
-            </option>
             <option value="Hotelaria">
               Hotelaria
             </option>
+            <option value="Gestão de Património">
+              Gestão de Património
+            </option>
+            <option value="Promoção">
+              Promoção
+            </option>
+            <option value="Construção">
+              Construção
+            </option>
             <option value="Investimentos">
               Investimentos
-            </option>
-            <option value="Gestão e Serviços">
-              Gestão e Serviços
-            </option>
-            <option value="Internacionalização">
-              Internacionalização
             </option>
             <option value="Consulta Geral">
               Consulta Geral

@@ -3,21 +3,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getAllProjects } from "@/lib/content";
 import ProjectsList from "./ProjectsList";
-import InvestmentCycle from "./InvestmentCycle";
 import { BreadcrumbsJsonLd } from "@/components/JsonLd";
 import styles from "./Projects.module.css";
 
 export const metadata: Metadata = {
-  title: "Projetos & Investimentos — ARCTUREAL",
+  title: "Projetos — ARCTUREAL",
   description:
-    "Explore o portfólio de arquitetura e oportunidades de investimento imobiliário do grupo ARCTUREAL: habitação contemporânea, edifícios corporativos e hotelaria.",
+    "Explore o portfólio de arquitetura e projetos do grupo ARCTUREAL: habitação contemporânea, edifícios corporativos e hotelaria.",
   alternates: {
     canonical: "/projetos",
   },
   openGraph: {
-    title: "Projetos & Investimentos | ARCTUREAL",
+    title: "Projetos | ARCTUREAL",
     description:
-      "Portfólio de obras e estratégias integradas de investimento imobiliário do coletivo ARCTUREAL em Portugal e internacionalmente.",
+      "Portfólio de obras e projetos de arquitetura do coletivo ARCTUREAL em Portugal e internacionalmente.",
     url: "https://www.arctureal.com/projetos",
   },
 };
@@ -27,7 +26,7 @@ export default function ProjectsPage() {
 
   const breadcrumbs = [
     { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Investidores", item: "https://www.arctureal.com/projetos" },
+    { name: "Projetos", item: "https://www.arctureal.com/projetos" },
   ];
 
   return (
@@ -53,45 +52,45 @@ export default function ProjectsPage() {
         <div className="container" style={{ position: "relative", zIndex: 3, width: "100%" }}>
           <div className={`${styles.heroContent} animate-fade-in`}>
             <h1 id="projetos-title" className={styles.heroTitle}>
-              Projetos &amp; Investimentos
+              Projetos
             </h1>
             <div className={styles.heroDivider} />
           </div>
         </div>
       </section>
 
-      {/* Investor Overview Section */}
+      {/* Section: Parcerias & Estratégia - Criação de Valor em Todas as Atividades */}
       <section className={styles.investorSection} aria-labelledby="investor-overview-title">
         <div className="container">
           <div className={styles.investorGrid}>
             <div className={styles.investorContent}>
               <span className={styles.investorEyebrow}>PARCERIAS &amp; ESTRATÉGIA</span>
               <h2 id="investor-overview-title" className={styles.investorTitle}>
-                Estruturação Imobiliária &amp; Criação de Valor
+                Criação de Valor em Todas as Atividades
               </h2>
               <p className={styles.investorLead}>
-                Desenvolvemos oportunidades de copromoção e investimento direto para investidores privados, family offices e instituições. Acompanhamos cada ativo em todas as fases: aquisição, projeto, obra e exploração.
+                O Grupo Arctureal reúne empresas com atuação em hotelaria, gestão de património, promoção, construção e investimentos. Cada atividade é conduzida com rigor e visão de longo prazo, partilhando uma mesma cultura de exigência e um único interlocutor.
               </p>
 
               <div className={styles.investorPillarsList}>
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Localização:</strong> Ativos em zonas consolidadas, com potencial de valorização a médio e longo prazo.
+                    <strong>Visão de longo prazo:</strong> decisões orientadas para a criação e preservação de valor.
                   </div>
                 </div>
 
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Risco controlado:</strong> Análise jurídica e urbanística antes de investir, e acompanhamento rigoroso do orçamento.S
+                    <strong>Risco controlado:</strong> análise rigorosa antes de cada decisão e acompanhamento próximo da execução.
                   </div>
                 </div>
 
                 <div className={styles.investorPillarItem}>
                   <div className={styles.pillarDot} />
                   <div className={styles.pillarText}>
-                    <strong>Eficiência Energética:</strong> Obras pensadas para reduzir os custos de operação no futuro.
+                    <strong>Um só interlocutor:</strong> as empresas do Grupo colaboram entre si quando o projeto o exige.
                   </div>
                 </div>
               </div>
@@ -100,7 +99,7 @@ export default function ProjectsPage() {
             <div className={styles.investorImageWrapper}>
               <Image
                 src="/images/areas/investimentos.webp"
-                alt="Estruturação de investimentos imobiliários e desenvolvimento de ativos Arctureal"
+                alt="Criação de valor em todas as atividades do Grupo Arctureal"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={styles.investorImage}
@@ -110,25 +109,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Integrated Investment Cycle Section */}
-      <section className={styles.cycleSection} aria-labelledby="cycle-title">
-        <div className="container">
-          <div className={styles.cycleHeader}>
-            <span className={styles.cycleEyebrow}>METODOLOGIA INTEGRADA</span>
-            <h2 id="cycle-title" className={styles.cycleTitle}>
-              Ciclo de Valor para o Investidor
-            </h2>
-            <p className={styles.cycleLead}>
-              Garantimos disciplina executiva e previsibilidade financeira através de um processo transparente estruturado em três fases fundamentais.
-            </p>
-          </div>
-
-          <InvestmentCycle />
-        </div>
-      </section>
-
       {/* Projects Portfolio Section with Sticky 3D Parallax Background */}
-      <section className={styles.projectsSection} aria-label="Arquivo de Obras e Projetos de Arquitetura">
+      <section className={styles.projectsSection} aria-label="Portfólio de Projetos de Arquitetura">
         {/* Sticky Background Track & Canvas */}
         <div className={styles.stickyBackgroundTrack} aria-hidden="true">
           <div className={styles.stickyBackground}>
@@ -153,7 +135,7 @@ export default function ProjectsPage() {
           <div className="container">
             <div className={styles.projectsHeader}>
               <span className={styles.cycleEyebrow}>PORTFÓLIO DE PROJETOS</span>
-              <h2 className={styles.projectsTitle}>Arquivo de Obras</h2>
+              <h2 className={styles.projectsTitle}>Portfólio</h2>
               <p className={styles.projectsLead}>
                 Uma seleção de estudos prévios, edifícios construídos e intervenções espaciais desenvolvidas com rigor e identidade pelo coletivo Arctureal.
               </p>

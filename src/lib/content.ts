@@ -13,7 +13,7 @@ export interface Project {
   slug: string;
   title: string;
   subtitle: string;
-  category: "Habitação" | "Comercial" | "Regeneração Urbana" | "Hotelaria" | string;
+  category: "Habitação" | "Comercial" | "Hotelaria" | string;
   year: string;
   location: string;
   company: string;

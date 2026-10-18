@@ -7,16 +7,16 @@ import { BreadcrumbsJsonLd } from "@/components/JsonLd";
 import styles from "./Contactos.module.css";
 
 export const metadata: Metadata = {
-  title: "Contactos — Atelier Central Lisboa | ARCTUREAL",
+  title: "Contactos | ARCTUREAL",
   description:
-    "Entre em contacto com o grupo ARCTUREAL. Sede: Estrada da Luz, 96-A, 1600-161 Lisboa. Telefone: (+351) 211 450 244. Email: geral@arctureal.com.",
+    "Entre em contacto com o grupo ARCTUREAL em Lisboa. Email: geral@arctureal.com.",
   alternates: {
     canonical: "/contactos",
   },
   openGraph: {
     title: "Contactos | ARCTUREAL",
     description:
-      "Atelier Central da ARCTUREAL na Estrada da Luz, Lisboa. Marque uma reunião com as nossas equipas de arquitetura e engenharia.",
+      "Entre em contacto com a ARCTUREAL. Marque uma reunião com as nossas equipas através de geral@arctureal.com.",
     url: "https://www.arctureal.com/contactos",
   },
 };
@@ -38,7 +38,7 @@ export default function ContactosPage() {
         <div className={styles.heroBackground}>
           <Image
             src="/images/contactos-hero.webp"
-            alt="Atelier e sede institucional da Arctureal na Estrada da Luz, Lisboa"
+            alt="Atelier e sede institucional da Arctureal em Lisboa"
             fill
             priority
             quality={90}
@@ -70,37 +70,17 @@ export default function ContactosPage() {
               <div className={styles.infoCard}>
                 <div className={styles.infoList}>
                   <div>
-                    <div className={styles.infoItemTitle}>Morada Institucional</div>
-                    <div className={styles.infoItemValue}>{site.contacts.address}</div>
-                    <div style={{ marginTop: "0.25rem" }}>
-                      <a
-                        href={site.contacts.googleMapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-architectural"
-                        style={{ fontSize: "0.75rem" }}
-                      >
-                        Abrir no Google Maps &rarr;
-                      </a>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className={styles.infoItemTitle}>Contacto Telefónico</div>
-                    <div className={styles.infoItemValue}>
-                      <a href={`tel:${site.contacts.phoneRaw}`} className={styles.infoItemLink}>
-                        {site.contacts.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div>
                     <div className={styles.infoItemTitle}>Correio Eletrónico Geral</div>
                     <div className={styles.infoItemValue}>
                       <a href={`mailto:${site.contacts.email}`} className={styles.infoItemLink}>
                         {site.contacts.email}
                       </a>
                     </div>
+                  </div>
+
+                  <div>
+                    <div className={styles.infoItemTitle}>Localização</div>
+                    <div className={styles.infoItemValue}>Lisboa, Portugal</div>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,6 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
     "Todos",
     "Habitação",
     "Comercial",
-    "Regeneração Urbana",
     "Hotelaria",
   ];
 

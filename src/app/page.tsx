@@ -64,7 +64,7 @@ export default function HomePage() {
             </h2>
             <div className={styles.statementBody}>
               <p>
-                A Arctureal reúne empresas de imobiliário, hotelaria, investimentos, gestão e serviços e internacionalização. Cada uma tem a sua equipa e a sua especialidade, e todas trabalham em conjunto quando o projeto o pede.
+                O Grupo Arctureal atua de forma integrada em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos. Cada área conta com equipas dedicadas e especializadas, articulando sinergias para uma visão estratégica e abrangente de cada projeto.
               </p>
               <Link href="/grupo" className="link-architectural" style={{ alignSelf: "flex-start" }}>
                 Conhecer o grupo &rarr;
@@ -75,7 +75,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* Áreas de Atividade: Imobiliário, Hotelaria, Investimentos, Gestão e Serviços, Internacional */}
+      {/* Áreas de Atividade: Hotelaria, Gestão de Património, Promoção, Construção e Investimentos */}
       <AreasShowcase />
 
       {/* Metrics Ribbon Section: Presença 5 Áreas / 3 Geografias / 1 Visão Comum / ∞ Horizonte */}
@@ -95,7 +95,7 @@ export default function HomePage() {
             {/* 5 / Áreas */}
             <div className={styles.metricBlock}>
               <div className={styles.metricValueWrapper}>
-                <span className={styles.metricValue}>5</span>
+                <span className={styles.metricValue}>4</span>
               </div>
               <div className={styles.metricBottomRow}>
                 <span className={styles.metricLabel}>Áreas</span>
@@ -105,7 +105,7 @@ export default function HomePage() {
             {/* 3 / Geografias */}
             <div className={styles.metricBlock}>
               <div className={styles.metricValueWrapper}>
-                <span className={styles.metricValue}>3</span>
+                <span className={styles.metricValue}>2</span>
               </div>
               <div className={styles.metricBottomRow}>
                 <span className={styles.metricLabel}>Geografias</span>
@@ -140,15 +140,6 @@ export default function HomePage() {
             </Link>
 
             <div className={styles.ctaContactBox}>
-              <span className={styles.ctaContactItem}>
-                {site.contacts.address}
-              </span>
-              <span className={styles.ctaContactItem}>
-                Telefone:{" "}
-                <a href={`tel:${site.contacts.phoneRaw}`}>
-                  {site.contacts.phone}
-                </a>
-              </span>
               <span className={styles.ctaContactItem}>
                 Email:{" "}
                 <a href={`mailto:${site.contacts.email}`}>

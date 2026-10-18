@@ -24,18 +24,19 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arctureal.com"),
   title: {
-    default: "Arctureal — Imobiliário, Hotelaria e Investimento",
+    default: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
     template: "%s | ARCTUREAL",
   },
   description:
-    "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
+    "Grupo empresarial com sede em Lisboa. Atuação integrada em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos, com um só interlocutor do início ao fim.",
   keywords: [
-    "imobiliário lisboa",
-    "hotelaria portugal",
-    "investimento imobiliário",
-    "desenvolvimento imobiliário",
     "grupo arctureal",
-    "projetos imobiliários",
+    "hotelaria portugal",
+    "gestão de património",
+    "promoção",
+    "construção",
+    "investimentos",
+    "arctureal lisboa",
     "arctureal",
   ],
   authors: [{ name: "ARCTUREAL" }],
@@ -45,23 +46,23 @@ export const metadata: Metadata = {
     locale: "pt_PT",
     url: "https://www.arctureal.com",
     siteName: "ARCTUREAL",
-    title: "Arctureal — Imobiliário, Hotelaria e Investimento",
+    title: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
     description:
-      "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
+      "Grupo empresarial com sede em Lisboa. Atuação integrada em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos, com um só interlocutor do início ao fim.",
     images: [
       {
         url: "/images/projects/hero-architecture.svg",
         width: 1200,
         height: 750,
-        alt: "Arctureal — Imobiliário, Hotelaria e Investimento",
+        alt: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arctureal — Imobiliário, Hotelaria e Investimento",
+    title: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
     description:
-      "Grupo de empresas com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
+      "Grupo empresarial com sede em Lisboa. Atuação integrada em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos, com um só interlocutor do início ao fim.",
     images: ["/images/projects/hero-architecture.svg"],
   },
   icons: {

@@ -10,14 +10,14 @@ import styles from "./Grupo.module.css";
 export const metadata: Metadata = {
   title: "Quem Somos & O Grupo — ARCTUREAL",
   description:
-    "Coletivo e ecossistema integrado em Lisboa: conceção arquitetónica de autor, hotelaria, investimento imobiliário, gestão de obras e projeção internacional.",
+    "Grupo empresarial integrado com sede em Lisboa: Hotelaria, Gestão de Património, Promoção, Construção e Investimentos.",
   alternates: {
     canonical: "/grupo",
   },
   openGraph: {
     title: "Quem Somos & O Grupo | ARCTUREAL",
     description:
-      "Coletivo e ecossistema integrado em Lisboa: conceção arquitetónica de autor, hotelaria, investimento imobiliário, gestão de obras e projeção internacional.",
+      "Grupo empresarial integrado com sede em Lisboa: Hotelaria, Gestão de Património, Promoção, Construção e Investimentos.",
     url: "https://www.arctureal.com/grupo",
   },
 };

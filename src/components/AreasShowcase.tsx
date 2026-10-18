@@ -15,39 +15,39 @@ interface AreaItem {
 
 const areas: AreaItem[] = [
   {
-    id: "imobiliario",
-    index: "01",
-    title: "Imobiliário",
-    desc: "Desenvolvimento de habitação de autor e edifícios singulares que equilibram a nobreza dos materiais com o valor do lugar.",
-    image: "/images/areas/imobiliario.webp",
-  },
-  {
     id: "hotelaria",
-    index: "02",
+    index: "01",
     title: "Hotelaria",
-    desc: "Resorts de refúgio, boutique hotéis e espaços imersivos desenhados em simbiose com a paisagem natural e o património.",
+    desc: "Hotéis boutique de charme, com identidade própria, atenção ao detalhe e uma experiência de hospitalidade personalizada.",
     image: "/images/areas/hotelaria.webp",
   },
   {
-    id: "investimentos",
-    index: "03",
-    title: "Investimentos",
-    desc: "Estruturação técnica e arquitetónica de ativos imobiliários com foco em valorização sustentável e liquidez a longo prazo.",
-    image: "/images/areas/investimentos.webp",
-  },
-  {
-    id: "gestao-servicos",
-    index: "04",
-    title: "Gestão e Serviços",
-    desc: "Acompanhamento rigoroso desde o estudo prévio à entrega de chave: fiscalização, controlo de custos e certificação bioclimática.",
+    id: "gestao-patrimonio",
+    index: "02",
+    title: "Gestão de Património",
+    desc: "Análise de viabilidade de projetos e acompanhamento da gestão de ativos, com rigor e informação clara em cada fase de decisão.",
     image: "/images/areas/gestao-servicos.webp",
   },
   {
-    id: "internacional",
-    index: "05",
-    title: "Internacional",
-    desc: "Projeção do saber construtivo português em mercados globais através de parcerias estratégicas com promotores internacionais.",
+    id: "promocao",
+    index: "03",
+    title: "Promoção",
+    desc: "Desenvolvimento e promoção de projetos de referência, combinando visão estratégica, inovação sustentável e criação de valor a longo prazo.",
+    image: "/images/areas/imobiliario.webp",
+  },
+  {
+    id: "construcao",
+    index: "04",
+    title: "Construção",
+    desc: "Capacidade técnica e rigor executivo na construção e reabilitação, garantindo controlo de custos, cumprimento de prazos e excelência material.",
     image: "/images/areas/internacional-hub.webp",
+  },
+  {
+    id: "investimentos",
+    index: "05",
+    title: "Investimentos",
+    desc: "Gestão de um portfólio de ativos próprio, orientado para a geração de rendimento passivo, estável e recorrente a longo prazo.",
+    image: "/images/areas/investimentos.webp",
   },
 ];
 

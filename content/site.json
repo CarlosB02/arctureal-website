@@ -1,9 +1,9 @@
 {
   "brand": {
     "name": "ARCTUREAL",
-    "subtitle": "Imobiliário, Hotelaria e Investimento",
-    "tagline": "Estrutura integrada com sede em Lisboa. Desenvolvimento imobiliário, hotelaria e investimento, com um só interlocutor do início ao fim.",
-    "mission": "Desenvolvimento imobiliário, hotelaria e investimento com rigor e acompanhamento integral.",
+    "subtitle": "Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
+    "tagline": "Estrutura integrada com sede em Lisboa. Atuação multissetorial em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos.",
+    "mission": "Grupo empresarial integrado com atuação em Hotelaria, Gestão de Património, Promoção, Construção e Investimentos com rigor e acompanhamento integral.",
     "yearFounded": 2014,
     "siteUrl": "https://www.arctureal.com"
   },
@@ -23,7 +23,7 @@
       "href": "/"
     },
     {
-      "label": "Investidores",
+      "label": "Projetos",
       "href": "/projetos"
     },
     {

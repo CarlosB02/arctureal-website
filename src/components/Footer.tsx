@@ -52,18 +52,6 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Contactos</h4>
             <div className={styles.contactList}>
               <div className={styles.contactBlock}>
-                <span className={styles.contactLabel}>Morada</span>
-                <p className={styles.contactValue}>{site.contacts.address}</p>
-              </div>
-
-              <div className={styles.contactBlock}>
-                <span className={styles.contactLabel}>Linha Direta</span>
-                <a href={`tel:${site.contacts.phoneRaw}`} className={styles.contactLink}>
-                  {site.contacts.phone}
-                </a>
-              </div>
-
-              <div className={styles.contactBlock}>
                 <span className={styles.contactLabel}>Email</span>
                 <a href={`mailto:${site.contacts.email}`} className={styles.contactLink}>
                   {site.contacts.email}
