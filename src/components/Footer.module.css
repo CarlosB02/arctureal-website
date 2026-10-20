@@ -248,10 +248,33 @@
   gap: 1rem;
 }
 
+.legalGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.legalDivider {
+  color: #555047;
+  font-size: 0.75rem;
+}
+
 .legalText {
   font-size: 0.78rem;
   color: #7A7368;
   margin: 0;
+}
+
+.legalLink {
+  font-size: 0.78rem;
+  color: #7A7368;
+  text-decoration: none;
+  transition: color var(--transition-smooth, 240ms ease);
+}
+
+.legalLink:hover {
+  color: var(--color-primary, #C08440);
 }
 
 .socialRow {

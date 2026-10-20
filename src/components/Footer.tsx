@@ -4,6 +4,8 @@ import Image from "next/image";
 import { getSiteConfig } from "@/lib/content";
 import styles from "./Footer.module.css";
 
+import CookiePreferencesButton from "@/components/CookiePreferencesButton";
+
 export default function Footer() {
   const site = getSiteConfig();
 
@@ -68,7 +70,19 @@ export default function Footer() {
 
         {/* Linha inferior */}
         <div className={styles.bottomBar}>
-          <p className={styles.legalText}>{site.footer.legal}</p>
+          <div className={styles.legalGroup}>
+            <p className={styles.legalText}>{site.footer.legal}</p>
+            <span className={styles.legalDivider} aria-hidden="true">•</span>
+            <Link href="/privacidade" className={styles.legalLink}>
+              Privacidade
+            </Link>
+            <span className={styles.legalDivider} aria-hidden="true">•</span>
+            <Link href="/cookies" className={styles.legalLink}>
+              Cookies
+            </Link>
+            <span className={styles.legalDivider} aria-hidden="true">•</span>
+            <CookiePreferencesButton />
+          </div>
           <div className={styles.socialRow}>
             {site.socials.map((social) => (
               <a

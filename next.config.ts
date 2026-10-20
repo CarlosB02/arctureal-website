@@ -16,6 +16,16 @@ const nextConfig: NextConfig = {
         destination: "/grupo",
         permanent: true,
       },
+      {
+        source: "/politica-de-privacidade",
+        destination: "/privacidade",
+        permanent: true,
+      },
+      {
+        source: "/politica-de-cookies",
+        destination: "/cookies",
+        permanent: true,
+      },
     ];
   },
 };
