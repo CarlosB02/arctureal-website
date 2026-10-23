@@ -68,7 +68,20 @@ export default function Footer() {
 
         {/* Linha inferior */}
         <div className={styles.bottomBar}>
-          <p className={styles.legalText}>{site.footer.legal}</p>
+          <div className={styles.bottomLeft}>
+            <p className={styles.legalText}>{site.footer.legal}</p>
+            <div className={styles.legalNav}>
+              <Link href="/privacidade" className={styles.legalLink}>
+                Privacidade
+              </Link>
+              <span className={styles.legalDot} aria-hidden="true">
+                ·
+              </span>
+              <Link href="/cookies" className={styles.legalLink}>
+                Cookies
+              </Link>
+            </div>
+          </div>
           <div className={styles.socialRow}>
             {site.socials.map((social) => (
               <a
