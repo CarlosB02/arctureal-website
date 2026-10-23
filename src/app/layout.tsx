@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ArchitecturalRuler from "@/components/ArchitecturalRuler";
+import CookieBanner from "@/components/CookieBanner";
+import Analytics from "@/components/Analytics";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import { getSiteConfig } from "@/lib/content";
 
@@ -95,7 +97,10 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
 }
+
