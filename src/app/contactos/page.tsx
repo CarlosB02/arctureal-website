@@ -9,14 +9,14 @@ import styles from "./Contactos.module.css";
 export const metadata: Metadata = {
   title: "Contactos | ARCTUREAL",
   description:
-    "Entre em contacto com o grupo ARCTUREAL em Lisboa. Email: geral@arctureal.com.",
+    "Entre em contacto com o grupo ARCTUREAL em Lisboa. Email: geral@arctureal.pt.",
   alternates: {
     canonical: "/contactos",
   },
   openGraph: {
     title: "Contactos | ARCTUREAL",
     description:
-      "Entre em contacto com a ARCTUREAL. Marque uma reunião com as nossas equipas através de geral@arctureal.com.",
+      "Entre em contacto com a ARCTUREAL. Marque uma reunião com as nossas equipas através de geral@arctureal.pt.",
     url: "https://www.arctureal.com/contactos",
   },
 };
@@ -92,7 +92,7 @@ export default function ContactosPage() {
               <p className={styles.formSubtitle}>
                 Conte-nos o que tem em mente e entraremos em contacto consigo o mais breve possível.
               </p>
-              <ContactForm />
+              <ContactForm recipientEmail={site.contacts.email} />
             </div>
           </div>
         </div>

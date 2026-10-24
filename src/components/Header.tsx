@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { getSiteConfig } from "@/lib/content";
 import styles from "./Header.module.css";
 
 interface HeaderProps {
@@ -11,6 +12,7 @@ interface HeaderProps {
 }
 
 export default function Header({ navigation }: HeaderProps) {
+  const site = getSiteConfig();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -193,7 +195,7 @@ export default function Header({ navigation }: HeaderProps) {
             Contacto Direto &rarr;
           </Link>
           <div className={styles.mobileContactMeta}>
-            <p className={styles.mobileContactText}>geral@arctureal.com</p>
+            <p className={styles.mobileContactText}>{site.contacts.email}</p>
           </div>
         </div>
       </div>

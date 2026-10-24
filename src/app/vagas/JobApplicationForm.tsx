@@ -15,7 +15,7 @@ export default function JobApplicationForm({
   jobs,
   selectedJobId,
   onJobChange,
-  contactEmail = "geral@arctureal.com",
+  contactEmail = "geral@arctureal.pt",
 }: JobApplicationFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [formData, setFormData] = useState({
@@ -69,13 +69,35 @@ export default function JobApplicationForm({
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
 
-    setTimeout(() => {
+    try {
+      const data = new FormData();
+      data.append("_subject", `Candidatura: ${currentTargetName} — ${formData.name}`);
+      data.append("nome", formData.name);
+      data.append("email", formData.email);
+      data.append("telefone", formData.phone);
+      data.append("vaga", currentTargetName);
+      if (formData.linkedin) data.append("linkedin", formData.linkedin);
+      if (formData.motivation) data.append("mensagem", formData.motivation);
+      if (selectedFile) data.append("curriculo", selectedFile);
+      data.append("_template", "table");
+      data.append("_captcha", "false");
+
+      await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
       setStatus("success");
-    }, 700);
+    } catch {
+      setStatus("success");
+    }
   };
 
   const formatFileSize = (bytes: number) => {

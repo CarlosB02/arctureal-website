@@ -12,8 +12,8 @@ interface AnalyticsProps {
   gaId?: string;
 }
 
-export default function Analytics({ gaId }: AnalyticsProps) {
-  const measurementId = gaId || process.env.NEXT_PUBLIC_GA_ID;
+export default function Analytics({ gaId = "G-MZ4JL5DR2X" }: AnalyticsProps) {
+  const measurementId = gaId || process.env.NEXT_PUBLIC_GA_ID || "G-MZ4JL5DR2X";
 
   useEffect(() => {
     // Configura o consentimento inicial do Google Consent Mode v2

@@ -98,7 +98,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <CookieBanner />
-        <Analytics />
+        <Analytics gaId="G-MZ4JL5DR2X" />
       </body>
     </html>
   );
