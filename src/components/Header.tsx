@@ -46,9 +46,9 @@ export default function Header({ navigation }: HeaderProps) {
     };
   }, [mobileOpen]);
 
-  // Start transparent at top and transition to dark on scroll across all pages
-  const isProjectDetail = pathname.startsWith("/projetos/") && pathname !== "/projetos";
-  const startsTransparent = !isProjectDetail;
+  // Start transparent at top only on pages with a hero image; on 404 or project details stay solid dark
+  const HERO_PAGES = ["/", "/projetos", "/grupo", "/vagas", "/contactos", "/privacidade", "/cookies"];
+  const startsTransparent = HERO_PAGES.includes(pathname);
 
   let headerClass = styles.header;
   if (startsTransparent && !isScrolled) {
