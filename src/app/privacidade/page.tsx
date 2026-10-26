@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Política de Privacidade | ARCTUREAL",
     description:
       "Conheça o nosso compromisso com a confidencialidade e a segurança no tratamento de dados pessoais segundo o RGPD.",
-    url: "https://www.arctureal.com/privacidade",
+    url: "https://arctureal.pt/privacidade",
   },
 };
 
@@ -36,8 +36,8 @@ export default function PrivacidadePage() {
   const site = getSiteConfig();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Política de Privacidade", item: "https://www.arctureal.com/privacidade" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Política de Privacidade", item: "https://arctureal.pt/privacidade" },
   ];
 
   return (

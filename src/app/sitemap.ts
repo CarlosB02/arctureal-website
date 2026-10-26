@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.arctureal.com";
+  const baseUrl = "https://arctureal.pt";
 
   return [
     {

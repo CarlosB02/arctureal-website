@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Projetos | ARCTUREAL",
     description:
       "Portfólio de obras e projetos de arquitetura do coletivo ARCTUREAL em Portugal e internacionalmente.",
-    url: "https://www.arctureal.com/projetos",
+    url: "https://arctureal.pt/projetos",
   },
 };
 
@@ -25,8 +25,8 @@ export default function ProjectsPage() {
   const projects = getAllProjects();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Projetos", item: "https://www.arctureal.com/projetos" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Projetos", item: "https://arctureal.pt/projetos" },
   ];
 
   return (

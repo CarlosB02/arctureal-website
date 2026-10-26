@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Quem Somos & O Grupo | ARCTUREAL",
     description:
       "Grupo empresarial integrado com sede em Lisboa: Hotelaria, Gestão de Património, Promoção, Construção e Investimentos.",
-    url: "https://www.arctureal.com/grupo",
+    url: "https://arctureal.pt/grupo",
   },
 };
 
@@ -26,8 +26,8 @@ export default function GrupoPage() {
   const group = getGroupData();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Grupo", item: "https://www.arctureal.com/grupo" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Grupo", item: "https://arctureal.pt/grupo" },
   ];
 
   const heroData = group.hero || {

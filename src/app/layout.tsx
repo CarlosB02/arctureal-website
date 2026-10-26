@@ -24,7 +24,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arctureal.com"),
+  metadataBase: new URL("https://arctureal.pt"),
   title: {
     default: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
     template: "%s | ARCTUREAL",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_PT",
-    url: "https://www.arctureal.com",
+    url: "https://arctureal.pt",
     siteName: "ARCTUREAL",
     title: "Arctureal — Hotelaria, Gestão de Património, Promoção, Construção e Investimentos",
     description:

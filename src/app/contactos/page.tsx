@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Contactos | ARCTUREAL",
     description:
       "Entre em contacto com a ARCTUREAL. Marque uma reunião com as nossas equipas através de geral@arctureal.pt.",
-    url: "https://www.arctureal.com/contactos",
+    url: "https://arctureal.pt/contactos",
   },
 };
 
@@ -25,8 +25,8 @@ export default function ContactosPage() {
   const site = getSiteConfig();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Contactos", item: "https://www.arctureal.com/contactos" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Contactos", item: "https://arctureal.pt/contactos" },
   ];
 
   return (

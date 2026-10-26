@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Vagas & Carreiras | ARCTUREAL",
     description:
       "Oportunidades profissionais no Grupo Arctureal em Lisboa: consulte os requisitos da vaga e submeta a sua candidatura.",
-    url: "https://www.arctureal.com/vagas",
+    url: "https://arctureal.pt/vagas",
   },
 };
 
@@ -26,8 +26,8 @@ export default function VagasPage() {
   const site = getSiteConfig();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Vagas", item: "https://www.arctureal.com/vagas" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Vagas", item: "https://arctureal.pt/vagas" },
   ];
 
   return (

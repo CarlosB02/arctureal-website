@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Política de Cookies | ARCTUREAL",
     description:
       "Informações sobre a utilização, categorias e gestão de cookies na plataforma digital do Grupo Arctureal.",
-    url: "https://www.arctureal.com/cookies",
+    url: "https://arctureal.pt/cookies",
   },
 };
 
@@ -34,8 +34,8 @@ export default function CookiesPage() {
   const site = getSiteConfig();
 
   const breadcrumbs = [
-    { name: "Início", item: "https://www.arctureal.com" },
-    { name: "Política de Cookies", item: "https://www.arctureal.com/cookies" },
+    { name: "Início", item: "https://arctureal.pt" },
+    { name: "Política de Cookies", item: "https://arctureal.pt/cookies" },
   ];
 
   return (
