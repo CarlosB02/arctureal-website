@@ -80,6 +80,20 @@ export default function Footer() {
               <Link href="/cookies" className={styles.legalLink}>
                 Cookies
               </Link>
+              <span className={styles.legalDot} aria-hidden="true">
+                ·
+              </span>
+              <span className={styles.creditText}>
+                Desenhado por{" "}
+                <a
+                  href="https://enimble.pt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.creditLink}
+                >
+                  Enimble
+                </a>
+              </span>
             </div>
           </div>
           <div className={styles.socialRow}>
