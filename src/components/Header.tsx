@@ -80,9 +80,8 @@ export default function Header({ navigation }: HeaderProps) {
               />
             ) : (
               <span
-                className={`${styles.brandName} ${
-                  isDarkTheme ? styles.brandNameLight : styles.brandNameDark
-                }`}
+                className={`${styles.brandName} ${isDarkTheme ? styles.brandNameLight : styles.brandNameDark
+                  }`}
               >
                 ARCTUREAL
               </span>
@@ -117,9 +116,8 @@ export default function Header({ navigation }: HeaderProps) {
           <div className={styles.actions}>
             <Link
               href="/contactos"
-              className={`${styles.contactBtn} ${
-                isDarkTheme ? styles.contactBtnLight : styles.contactBtnDark
-              }`}
+              className={`${styles.contactBtn} ${isDarkTheme ? styles.contactBtnLight : styles.contactBtnDark
+                }`}
             >
               Contacto Direto
             </Link>
@@ -127,9 +125,8 @@ export default function Header({ navigation }: HeaderProps) {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className={`${styles.mobileToggle} ${
-                isDarkTheme ? styles.mobileToggleLight : styles.mobileToggleDark
-              }`}
+              className={`${styles.mobileToggle} ${isDarkTheme ? styles.mobileToggleLight : styles.mobileToggleDark
+                }`}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={mobileOpen}
